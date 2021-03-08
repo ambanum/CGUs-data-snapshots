@@ -31,14 +31,14 @@
     
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
       
-      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/css/app.css">
+      <link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/css/app.css">
     
 
     <noscript>
       
     </noscript>
-    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/images/favicon.png">
-    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines"><link rel="search" type="application/opensearchdescription+xml"
+    <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/images/touchicon-180.png"><link rel="canonical" href="https://developers.google.com/search/docs/advanced/guidelines/webmaster-guidelines"><link rel="search" type="application/opensearchdescription+xml"
             title="Google Developers" href="https://developers.google.com/s/opensearch.xml">
       
 
@@ -1060,9 +1060,9 @@
     
     
       
-        data-label="open search console header button"
-      
         data-category="Search docs"
+      
+        data-label="open search console header button"
       
     
     >Go to Search Console</a>
@@ -1737,11 +1737,13 @@
      class="devsite-nav-title"
    ><span class="devsite-nav-text" tooltip>Irrelevant keywords</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/malicious-behavior"
      class="devsite-nav-title"
-   ><span class="devsite-nav-text" tooltip>Creating pages with malicious behavior</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/user-gen-spam"
+   ><span class="devsite-nav-text" tooltip>Creating pages with malicious behavior</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/automated-queries"
+     class="devsite-nav-title"
+   ><span class="devsite-nav-text" tooltip>Automated queries</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/user-gen-spam"
      class="devsite-nav-title"
    ><span class="devsite-nav-text" tooltip>User-generated spam</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/prevent-comment-spam"
      class="devsite-nav-title"
-   ><span class="devsite-nav-text" tooltip>Ways to Prevent Comment Spam</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/report-spam"
+   ><span class="devsite-nav-text" tooltip>Ways to prevent comment spam</span></a></li><li class="devsite-nav-item"><a href="/search/docs/advanced/guidelines/report-spam"
      class="devsite-nav-title"
    ><span class="devsite-nav-text" tooltip>Report spam, paid links, or malware</span></a></li></ul></devsite-expandable-nav></li></ul></devsite-expandable-nav></li>
 
@@ -2961,7 +2963,7 @@
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
-  version="t-devsite-webserver-20210225-r02-rc00.433444808348848927"
+  version="t-devsite-webserver-20210302-r01-rc00.433512721405690202"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -2995,7 +2997,7 @@
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
-  version="t-devsite-webserver-20210225-r02-rc00.433444808348848927"
+  version="t-devsite-webserver-20210302-r01-rc00.433512721405690202"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3048,7 +3050,7 @@
 <li>Provide a <a href="http://sitemaps.org" class="external">sitemap file</a> with links that point to the important pages on your site. Also provide a page with a human-readable list of links to these pages (sometimes called a site index or site map page).</li>
 <li>Limit the number of links on a page to a reasonable number (a few thousand at most).</li>
 <li>Make sure that your web server correctly supports the <code translate="no" dir="ltr">If-Modified-Since</code> HTTP header. This feature directs your web server to tell Google if your content has changed since we last crawled your site. Supporting this feature saves you bandwidth and overhead.</li>
-<li>Use the robots.txt file on your web server to manage your crawling budget by preventing crawling of infinite spaces such as search result pages. Keep your robots.txt file up to date. <a href="https://developers.google.com/webmasters/control-crawl-index/docs/faq">Learn how to manage crawling with the robots.txt file</a>. Test the coverage and syntax of your robots.txt file using the <a href="https://www.google.com/webmasters/tools/robots-testing-tool" class="external">robots.txt testing tool</a>.</li>
+<li>Use the robots.txt file on your web server to manage your crawling budget by preventing crawling of infinite spaces such as search result pages. Keep your robots.txt file up to date. <a href="/search/docs/advanced/robots/robots-faq">Learn how to manage crawling with the robots.txt file</a>. Test the coverage and syntax of your robots.txt file using the <a href="https://www.google.com/webmasters/tools/robots-testing-tool" class="external">robots.txt testing tool</a>.</li>
 </ul>
 <p><strong>Ways to help Google find your site:</strong></p>
 <ul>
@@ -3065,7 +3067,7 @@
 <li>Think about the words users would type to find your pages, and make sure that your site actually includes those words within it.</li>
 <li>Ensure that your <code translate="no" dir="ltr">&lt;title&gt;</code> elements and <code translate="no" dir="ltr">alt</code> attributes are descriptive, specific, and accurate.</li>
 <li>Design your site to have a clear conceptual page hierarchy.</li>
-<li>Follow our recommended best practices for <a href="/search/docs/advanced/guidelines/google-images">images</a>, <a href="/search/docs/advanced/guidelines/video">video</a>, and <a href="https://developers.google.com/structured-data/">structured data</a>.</li>
+<li>Follow our recommended best practices for <a href="/search/docs/advanced/guidelines/google-images">images</a>, <a href="/search/docs/advanced/guidelines/video">video</a>, and <a href="/search/docs/guides/intro-structured-data">structured data</a>.</li>
 <li>When using a content management system (for example, Wix or WordPress), make sure that it creates pages and links that search engines can crawl.</li>
 <li>To help Google fully understand your site's contents, allow all site assets that would significantly affect page rendering to be crawled: for example, CSS and JavaScript files that affect the understanding of the pages. The Google indexing system renders a web page as the user would see it, including images, CSS, and JavaScript files. To see which page assets that Googlebot cannot crawl use the <a href="https://support.google.com/webmasters/answer/9012289" class="external">URL Inspection tool</a>; to debug directives in your robots.txt file, use the <a href="https://support.google.com/webmasters/answer/6062598" class="external">robots.txt Tester</a> tool.</li>
 <li>Allow search bots to crawl your site without session IDs or URL parameters that track their path through the site. These techniques are useful for tracking individual user behavior, but the access pattern of bots is entirely different. Using these techniques may result in incomplete indexing of your site, as bots may not be able to eliminate URLs that look different but actually point to the same page.</li>
@@ -3090,7 +3092,7 @@
 </devsite-expandable>
 <h2 id="quality_guidelines" data-text="Quality guidelines">Quality guidelines</h2>
 <p>These quality guidelines cover the most common forms of deceptive or manipulative behavior, but Google may respond negatively to other misleading practices not listed here. It's not safe to assume that just because a specific deceptive technique isn't included on this page, Google approves of it. Website owners who spend their energies upholding the spirit of the basic principles will provide a much better user experience and subsequently enjoy better ranking than those who spend their time looking for loopholes they can exploit.</p>
-<p>If you believe that another site is abusing Google's quality guidelines, please let us know by <a href="https://www.google.com/webmasters/tools/spamreport">filing a spam report</a>. Google prefers developing scalable and automated solutions to problems, and will use the report for further improving our spam detection systems.</p>
+<p>If you believe that another site is abusing Google's quality guidelines, please let us know by <a href="https://www.google.com/webmasters/tools/spamreport" class="external">filing a spam report</a>. Google prefers developing scalable and automated solutions to problems, and will use the report for further improving our spam detection systems.</p>
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="2oPj5_9WxpA"
           data-autohide="1" data-showinfo="0" allowfullscreen>
@@ -3108,7 +3110,7 @@
 <ul>
 <li><a href="/search/docs/advanced/guidelines/auto-gen-content">Automatically generated content</a></li>
 <li>Participating in <a href="/search/docs/advanced/guidelines/link-schemes">link schemes</a></li>
-<li>Creating pages with <a href="https://support.google.com/webmasters/answer/66361">little or no original content</a></li>
+<li>Creating pages with <a href="https://support.google.com/webmasters/answer/66361" class="external">little or no original content</a></li>
 <li><a href="/search/docs/advanced/guidelines/cloaking">Cloaking</a></li>
 <li><a href="/search/docs/advanced/guidelines/sneaky-redirects">Sneaky redirects</a></li>
 <li><a href="/search/docs/advanced/guidelines/hidden-text-links">Hidden text or links</a></li>
@@ -3118,7 +3120,7 @@
 <li>Loading pages with <a href="/search/docs/advanced/guidelines/irrelevant-keywords">irrelevant keywords</a></li>
 <li>Creating pages with <a href="/search/docs/advanced/guidelines/malicious-behavior">malicious behavior</a>, such as phishing or installing viruses, trojans, or other badware</li>
 <li>Abusing <a href="/search/docs/guides/sd-policies">structured data</a> markup</li>
-<li>Sending <a href="https://support.google.com/webmasters/answer/66357" class="external">automated queries</a> to Google</li>
+<li>Sending <a href="/search/docs/advanced/guidelines/automated-queries">automated queries</a> to Google</li>
 </ul>
 <p><strong>Follow</strong> good practices like these:</p>
 <ul>
@@ -3190,7 +3192,7 @@
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
-  version="t-devsite-webserver-20210225-r02-rc00.433444808348848927"
+  version="t-devsite-webserver-20210302-r01-rc00.433512721405690202"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3222,7 +3224,7 @@
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
-  version="t-devsite-webserver-20210225-r02-rc00.433444808348848927"
+  version="t-devsite-webserver-20210302-r01-rc00.433512721405690202"
   data-label="Send Feedback Button"
   track-type="feedback"
   track-name="sendFeedbackLink"
@@ -3256,7 +3258,7 @@
 
 <devsite-content-footer class="nocontent">
   <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
-  <p>Last updated 2021-02-24 UTC.</p>
+  <p>Last updated 2021-03-05 UTC.</p>
 </devsite-content-footer>
 
 
@@ -3547,7 +3549,7 @@
        data-category="Site-Wide Custom Events"
        data-label="Footer Google Developers Link">
       <img class="devsite-footer-sites-logo"
-           src="https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/images/lockup-developers.svg"
+           src="https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/images/lockup-developers.svg"
            loading="lazy"
            alt="Google Developers">
     </a>
@@ -3894,7 +3896,7 @@
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics enable-analytics-iframe>
       
-        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension3": false, "dimension8": null, "dimension6": "en", "dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension4": "Google Search Central"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension3": false, "dimension8": null, "dimension6": "en", "dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension4": "Google Search Central"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension6": "en", "dimension11": false, "dimension1": "Signed out", "dimension5": "en", "dimension4": "Google Search Central", "dimension8": null, "dimension3": false}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension6": "en", "dimension11": false, "dimension1": "Signed out", "dimension5": "en", "dimension4": "Google Search Central", "dimension8": null, "dimension3": false}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
 <script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Google Search Central", "scriptsafe": null, "signedIn": "False", "tenant": "developers"}}</script>
       
     </devsite-analytics>
@@ -3902,12 +3904,12 @@
       <devsite-badger></devsite-badger>
     
     
-    <script nonce="e8hYcl1AKQ+B1nOKBkzurc/OX0clMY">
+    <script nonce="vCBqXZxMdvMaLhA6dwO5IH/ACyjjnB">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
     E.parentNode.insertBefore(t,E);})(window, document, 'script',
-    'https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591","https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vcf833c74c75e414e6b92dcb5faa0b41ae9c0f8f1752c0c30b6e4ea1d58a58591/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,113,115,117,118,120,122,125,129]]')
+    'https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8","https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/ve2b3219effe11173b4515247c51c6c16382b215fde591b8f8db0b6d41c561ba8/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,113,115,116,117,118,120,122,125,129,133]]')
   
 </script>
     <devsite-a11y-announce></devsite-a11y-announce>
