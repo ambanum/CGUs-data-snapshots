@@ -80,7 +80,7 @@
     "itemListElement": [{
       "@type": "ListItem",
       "position": 1,
-      "name": "Google Search Central",
+      "name": "Search Central",
       "item": "https://developers.google.com/search"
     },{
       "@type": "ListItem",
@@ -548,21 +548,56 @@
         
       
         
-          <tab dropdown
-    
-    
-    
-    >
-  <a href="https://developers.google.com/search/news"
+          <tab  >
+            <a href="https://developers.google.com/search/help"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="support"
+   
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Support"
+   >
+  Support
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developers.google.com/search/blog"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="blog"
+   
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Blog"
+   >
+  Blog
+</a>
+
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developers.google.com/search/news"
    class="gc-analytics-event "
    track-type="globalNav"
    track-metadata-position="nav"
    track-metadata-eventdetail="nav"
    track-name="what&#39;sNew"
    
-   
-     aria-haspopup="true"
-     aria-expanded="false"
    
    
      data-category="Site-Wide Custom Events"
@@ -572,89 +607,28 @@
   What&#39;s new
 </a>
 
-  <a href="#"
-     aria-haspopup="true"
-     aria-expanded="false"
-     aria-label="Dropdown menu"
-     role="button"
-     track-type="globalNav"
-     track-metadata-position="nav"
-     track-metadata-eventdetail="nav"
-     track-name="what&#39;sNew"
-     
-       data-category="Site-Wide Custom Events"
-     
-       data-label="Tab: What&#39;s new"
-     
-     class="devsite-tabs-dropdown-toggle devsite-icon devsite-icon-arrow-drop-down"></a>
+          </tab>
+        
+      
+        
+          <tab  >
+            <a href="https://developers.google.com/search/events"
+   class="gc-analytics-event "
+   track-type="globalNav"
+   track-metadata-position="nav"
+   track-metadata-eventdetail="nav"
+   track-name="events"
+   
+   
+   
+     data-category="Site-Wide Custom Events"
+   
+     data-label="Tab: Events"
+   >
+  Events
+</a>
 
-  <div class="devsite-tabs-dropdown" aria-label="submenu" hidden>
-    
-    <div class="devsite-tabs-dropdown-content">
-      
-        <div class="devsite-tabs-dropdown-column
-                    ">
-          
-            <ul class="devsite-tabs-dropdown-section
-                       ">
-              
-              
-              
-                <li class="devsite-nav-item">
-                  <a href="https://developers.google.com/search/blog"
-                     track-type="navMenu"
-                     track-name="Blog"
-                     track-metadata-position="nav"
-                     track-metadata-href="https://developers.google.com/search/blog"
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Blog
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://developers.google.com/search/events"
-                     track-type="navMenu"
-                     track-name="Events"
-                     track-metadata-position="nav"
-                     track-metadata-href="https://developers.google.com/search/events"
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Events
-                    </div>
-                    
-                  </a>
-                </li>
-              
-                <li class="devsite-nav-item">
-                  <a href="https://developers.google.com/search/updates"
-                     track-type="navMenu"
-                     track-name="Documentation updates"
-                     track-metadata-position="nav"
-                     track-metadata-href="https://developers.google.com/search/updates"
-                     tooltip
-                  >
-                    
-                    <div class="devsite-nav-item-title">
-                      Documentation updates
-                    </div>
-                    
-                  </a>
-                </li>
-              
-            </ul>
-          
-        </div>
-      
-    </div>
-  </div>
-</tab>
+          </tab>
         
       
         
@@ -678,27 +652,6 @@
           </tab>
         
       
-        
-          <tab  >
-            <a href="https://developers.google.com/search/help"
-   class="gc-analytics-event "
-   track-type="globalNav"
-   track-metadata-position="nav"
-   track-metadata-eventdetail="nav"
-   track-name="help"
-   
-   
-   
-     data-category="Site-Wide Custom Events"
-   
-     data-label="Tab: Help"
-   >
-  Help
-</a>
-
-          </tab>
-        
-      
     </nav>
 
   </devsite-tabs>
@@ -714,7 +667,7 @@
     enable-suggestions
       enable-query-completion
     
-    project-name="Google Search Central"
+    project-name="Search Central"
     tenant-name="Google Developers"
     project-scope="/search"
     url-scoped="https://developers.google.com/s/results/search"
@@ -1518,6 +1471,74 @@
             <li class="devsite-nav-item">
               
   
+  <a href="/search/help"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Support"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="support">
+  
+    <span class="devsite-nav-text" tooltip >
+      Support
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/blog"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
+
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Blog"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="blog">
+  
+    <span class="devsite-nav-text" tooltip >
+      Blog
+   </span>
+    
+    <span class="devsite-nav-icon material-icons" data-icon="forward"
+          >
+    </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
   <a href="/search/news"
     
        class="devsite-nav-title gc-analytics-event
@@ -1542,34 +1563,39 @@
   
 
   
-    <ul class="devsite-nav-responsive-tabs devsite-nav-has-menu
-               ">
-      
-<li class="devsite-nav-item">
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/search/events"
+    
+       class="devsite-nav-title gc-analytics-event
+              devsite-nav-has-children
+              "
+    
 
-  
-  <span
     
-       class="devsite-nav-title"
-       tooltip
-    
-    >
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Events"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav"
+     track-name="events">
   
-    <span class="devsite-nav-text" tooltip menu="What&#39;s new">
-      More
+    <span class="devsite-nav-text" tooltip >
+      Events
    </span>
     
     <span class="devsite-nav-icon material-icons" data-icon="forward"
-          menu="What&#39;s new">
+          >
     </span>
     
   
-  </span>
+  </a>
   
 
-</li>
-
-    </ul>
   
               
             </li>
@@ -1594,40 +1620,6 @@
   
     <span class="devsite-nav-text" tooltip >
       Case studies
-   </span>
-    
-    <span class="devsite-nav-icon material-icons" data-icon="forward"
-          >
-    </span>
-    
-  
-  </a>
-  
-
-  
-              
-            </li>
-          
-            <li class="devsite-nav-item">
-              
-  
-  <a href="/search/help"
-    
-       class="devsite-nav-title gc-analytics-event
-              devsite-nav-has-children
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Help"
-     track-type="globalNav"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav"
-     track-name="help">
-  
-    <span class="devsite-nav-text" tooltip >
-      Help
    </span>
     
     <span class="devsite-nav-icon material-icons" data-icon="forward"
@@ -2608,106 +2600,9 @@
     
   
     
-      
-      <ul class="devsite-nav-list" menu="What&#39;s new"
-          aria-label="Side menu" hidden>
-        
-          
-            
-            
-              
-<li class="devsite-nav-item">
-
   
-  <a href="/search/blog"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Blog"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav"
-     track-name="blog">
-  
-    <span class="devsite-nav-text" tooltip >
-      Blog
-   </span>
     
   
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/search/events"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Events"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav"
-     track-name="events">
-  
-    <span class="devsite-nav-text" tooltip >
-      Events
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-              
-<li class="devsite-nav-item">
-
-  
-  <a href="/search/updates"
-    
-       class="devsite-nav-title gc-analytics-event
-              
-              "
-    
-
-    
-     data-category="Site-Wide Custom Events"
-     data-label="Responsive Tab: Documentation updates"
-     track-type="navMenu"
-     track-metadata-eventDetail="globalMenu"
-     track-metadata-position="nav"
-     track-name="documentationUpdates">
-  
-    <span class="devsite-nav-text" tooltip >
-      Documentation updates
-   </span>
-    
-  
-  </a>
-  
-
-</li>
-
-            
-          
-        
-      </ul>
     
   
     
@@ -2832,7 +2727,7 @@
       
     >
     
-        Google Search Central
+        Search Central
       
   </a>
   
@@ -2959,7 +2854,7 @@
          <template class="thumb-rating-feedback">
          <devsite-feedback
   position="thumb-rating"
-  project-name="Google Search Central"
+  project-name="Search Central"
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
@@ -2993,7 +2888,7 @@
   
     <devsite-feedback
   position="header"
-  project-name="Google Search Central"
+  project-name="Search Central"
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
@@ -3188,7 +3083,7 @@
          <template class="thumb-rating-feedback">
          <devsite-feedback
   position="thumb-rating"
-  project-name="Google Search Central"
+  project-name="Search Central"
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
@@ -3220,7 +3115,7 @@
        
          <devsite-feedback
   position="footer"
-  project-name="Google Search Central"
+  project-name="Search Central"
   product-id="103417"
   bucket="Search Docs"
   context="DevSite feedback link"
@@ -3896,20 +3791,20 @@
     <devsite-heading-link></devsite-heading-link>
     <devsite-analytics enable-analytics-iframe>
       
-        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension5": "en", "dimension4": "Google Search Central", "dimension8": null, "dimension3": false, "dimension11": false, "dimension6": "en", "dimension1": "Signed out"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension5": "en", "dimension4": "Google Search Central", "dimension8": null, "dimension3": false, "dimension11": false, "dimension6": "en", "dimension1": "Signed out"}, "metrics": {"ratings_value": "metric1", "ratings_count": "metric2"}}]</script>
-<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Google Search Central", "scriptsafe": null, "signedIn": "False", "tenant": "developers", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}}</script>
+        <script type="application/json" analytics>[{"gaid": "UA-24532603-1", "dimensions": {"dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension4": "Search Central", "dimension8": null, "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}, {"gaid": "UA-24532603-6", "dimensions": {"dimension5": "en", "dimension11": false, "dimension1": "Signed out", "dimension4": "Search Central", "dimension8": null, "dimension3": false, "dimension6": "en"}, "metrics": {"ratings_count": "metric2", "ratings_value": "metric1"}}]</script>
+<script type="application/json" gtm>{"parameters": {"freeTrialEligibleUser": "False", "internalUser": "False", "language": {"machineTranslated": "False", "requested": "en", "served": "en"}, "pageType": "article", "projectName": "Search Central", "scriptsafe": null, "signedIn": "False", "tenant": "developers", "recommendations": {"sourcePage": "", "sourceType": 0, "sourceRank": 0, "sourceIdenticalDescriptions": 0, "sourceTitleWords": 0, "sourceDescriptionWords": 0, "experiment": ""}}}</script>
       
     </devsite-analytics>
     
       <devsite-badger></devsite-badger>
     
     
-    <script nonce="wXOGaonep4Qb3KtlC6nkFgrcHFV9GN">
+    <script nonce="WfEZsMzlHHVphiOUei8sO6VUATvXj8">
   
   (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
     t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
     E.parentNode.insertBefore(t,E);})(window, document, 'script',
-    'https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,113,115,116,117,118,120,122,125,129,133]]')
+    'https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/vb3e5e08002715e1c35193da350aee14e3a7ca7a39175a52d8160cd64c455f8c0/developers/images/favicon.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"],1,null,[1,6,8,12,14,17,21,25,40,50,63,70,75,76,80,87,88,91,92,93,97,98,100,101,102,103,105,107,108,111,113,115,117,118,120,122,125,129,133]]')
   
 </script>
     <devsite-a11y-announce></devsite-a11y-announce>
