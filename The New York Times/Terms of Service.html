@@ -22,7 +22,7 @@ This page describes the terms and conditions that govern your use of certain New
   <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/application-79172500fb4dbec2484043d570946543.css" id="stylesheet" />
     <!-- Entypo pictograms by Daniel Bruce — www.entypo.com -->
     <link rel="stylesheet" media="all" href="//static.zdassets.com/hc/assets/theming_v1_support-cf937686d5b6669242017892da7bad78.css" />
-  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4399331011348">
+  <link rel="stylesheet" type="text/css" href="//p20.zdassets.com/hc/theming_assets/968999/987838/style.css?digest=4399339143188">
 
   <link rel="shortcut icon" type="image/x-icon" href="//theme.zdassets.com/theme_assets/968999/1965f56573cfa15ed817f84bf2248be1e2feee32.ico" />
 
@@ -60,14 +60,15 @@ This page describes the terms and conditions that govern your use of certain New
 <!-- BEGIN AWS Chat pilot launch for Cancel Help page -->
 <script src="https://customerchat.nytimes.com/chat-js-sdk/versions/0.1.0.browser-sdk.min.js" type="text/javascript"></script>
 <script type="text/javascript">
-if(window.location.href.indexOf("/360003499613") > -1) {
-  <!-- TO TURN ON OR OFF THE CHAT PILOT -->
-  const CHAT_PILOT_FEATURE_FLAG = true;
-  <!-- TO TURN ON OR OFF THE CHAT PILOT -->
+window.addEventListener('load', function() {
+  const chatPilotButton = $("#Chat_New");
+  const livePersonButton = $("#Help_New");
 
-  window.addEventListener('load', function() {
-    const chatPilotButton = $("#Chat_New");
-    const livePersonButton = $("#Help_New");
+  // Chat Pilot is only available on the Cancel your subscription page
+  if (window.location.href.indexOf("/360003499613") > -1) {
+    <!-- TO TURN ON OR OFF THE CHAT PILOT -->
+    const CHAT_PILOT_FEATURE_FLAG = true;
+    <!-- TO TURN ON OR OFF THE CHAT PILOT -->
 
     let chatAvailableResp;
     const chat = new NYTCareChat();
@@ -76,6 +77,7 @@ if(window.location.href.indexOf("/360003499613") > -1) {
       .then(resp => {
         chatAvailableResp = resp && resp[0]?.duringAvailableHours && resp[0]?.hasAvailableSlots;
         console.log(chatAvailableResp)
+
         if (CHAT_PILOT_FEATURE_FLAG && chatAvailableResp) {
           livePersonButton && livePersonButton.css("display", "none");
           chatPilotButton && chatPilotButton.css("display", "");
@@ -87,29 +89,27 @@ if(window.location.href.indexOf("/360003499613") > -1) {
             });
           });
         } else {
-          livePersonButton && livePersonButton.css("display", "");
-          chatPilotButton && chatPilotButton.css("display", "none");
-          //<!-- BEGIN LivePerson Monitor. -->
-          window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
-          //<!-- END LivePerson Monitor. -->
+  			// if the feature flag is off or the Chat Pilot queue is full or it's after hours of operation
+          showLivepersonChat()
         }
-      })
-  })
-} else {
-  window.addEventListener('load', function() {
-    const chatPilotButton = $("#Chat_New");
-    const livePersonButton = $("#Help_New");
+     })
+  } else {
+  	// show the Liveperson Chat button in other Help pages
+    showLivepersonChat()
+  }
+
+  // function to show the Liveperson button, hide the Chat Pilot Button,
+  function showLivepersonChat() {
     livePersonButton && livePersonButton.css("display", "");
     chatPilotButton && chatPilotButton.css("display", "none");
     //<!-- BEGIN LivePerson Monitor. -->
     window.lpTag=window.lpTag || {};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'17743901'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;}
     //<!-- END LivePerson Monitor. -->
-  })
-}
-
+  }
+})
 </script>
 <!-- END AWS Chat pilot -->
-  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4399331011348"></script>
+  <script type="text/javascript" src="//p20.zdassets.com/hc/theming_assets/968999/987838/script.js?digest=4399339143188"></script>
 <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
 <body class="">
   
@@ -386,5 +386,5 @@ width: 100%;" border="1">
   <script src="//static.zdassets.com/hc/assets/moment-f6f8513da6ab17eadada59a1a4edb536.js"></script>
   <script src="//static.zdassets.com/hc/assets/hc_enduser-1c3c7f65068eb2969f199220010b50e4.js"></script>
   
-<script type="text/javascript">(function(){window['__CF$cv$params']={r:'63cc75afdfa35463',m:'fc937dfa2b0a8d011f8d32864d28b18fe9c2c39f-1617895017-1800-AW5ilTLmQ1vm4Wu0CFjo7rgEkT4k/XfvcichJxpyRj8qZMOpjVAWGG1PLCaUK+nld37vlfTS45+Pplzhhd1CeSgAWtDgeJ3ppzKjOCFQJdH96i7lTDfOR1Ppo6GIIlXqbTmz4KJim9Ux0qq28+s8xdXufWkX4ZiZELY5ERvW4b6YLhsf0DQezMpJ83nnpq+mHQ==',s:[0x6a168ab71c,0x1cbe65db07],}})();</script></body>
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'63cce3f66872ce23',m:'98ab93e5b458912e4b4eeffd4fbf3f633fe45405-1617899534-1800-AfNEmoGAUlWyRVnyVLCrP6ZLST/elxYmlEv9TF6eVnuHVd7nnZw1gJ4EDzU+EJzAZfH2O50bVRrve2+PGlGn5rSJH91fAZDEXERoNbaNjpSh/u9NKOXSmr9Fkte0JoTPVpye+rZK9a35xb+p9hNFuzfKia/TsGsYC2BYzPN9g0f79lejKlvQGjuoI03YyjInEA==',s:[0x16cb960c97,0xbaaeb793b9],}})();</script></body>
 </html>
