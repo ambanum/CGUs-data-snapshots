@@ -347,7 +347,7 @@
 <!-- <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call=""/> -->
 
     
-<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.a86c533ccb4306775155e21e9bbf6174.css" type="text/css">
+<link rel="stylesheet" href="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.91273b20fce8be2e09af0d458901563c.css" type="text/css">
 
 
 
@@ -372,12 +372,26 @@
 
 
 
+<!-- OneTrust Cookies Consent Notice start for Logi -->
+
+
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="a5d4a538-21e6-485f-9f0b-0bab76c31f5c"></script>
+
+
+
+
+    
+<script src="/etc.clientlibs/logitech-common/clientlibs/onetrust.min.32466e445f9e9ea6df4be5af56bc9981.js"></script>
+
+
+
+
     </head>
     
     
     <body class="page publish ">
         
-    <script src="//tags.tiqcdn.com/utag/logitech/main/prod/utag.sync.js"></script>
+    <script src="https://tags.tiqcdn.com/utag/logitech/main/prod/utag.sync.js"></script>
     <script type="text/javascript">
         var utag_data = {
   "customer_type": "Not Logged In",
@@ -391,8 +405,17 @@
   "site_language": "en",
   "site_locale": "en-gb"
 }
+
+        window.logitech = window.logitech || {};
+
+        window.logitech.initUtagAsync = function() {
+            let script = document.createElement('script');
+            script.src = 'https://tags.tiqcdn.com/utag/logitech/main/prod/utag.js';
+            script.type = 'text/javascript';
+            script.async = true;
+            document.querySelector('head').appendChild(script);
+        };
     </script>
-    <script type="text/javascript">(function(a,b,c,d){a='//tags.tiqcdn.com/utag/logitech/main/prod/utag.js';b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a)})();</script>
  
 
         <div class="site-wrapper" role="region" aria-label="Site Content">
@@ -483,7 +506,7 @@
 
 
 			<li>
-               <a href="https://www.astrogaming.com/en-gb" target="_blank" data-analytics-title="astro" aria-label="ASTRO">
+               <a href="https://www.astrogaming.com/en-gb" target="_blank" rel="noopener noreferrer" data-analytics-title="astro" aria-label="ASTRO">
                   	<img src="/content/dam/logitech/common/header/astro-bottom.svg" alt="" class="light-logo" style="height:20px"/>
                   	<img src="/content/dam/logitech/common/header/astro-overlay.svg" alt="" class="dark-logo" style="height:20px"/>
                </a>
@@ -500,7 +523,7 @@
 
 
 			<li>
-               <a href="https://www.bluemic.com/en-gb" target="_blank" data-analytics-title="blue" aria-label="Blue">
+               <a href="https://www.bluemic.com/en-gb" target="_blank" rel="noopener noreferrer" data-analytics-title="blue" aria-label="Blue">
                   	<img src="/content/dam/logitech/common/header/blue-bottom.svg" alt="" class="light-logo" style="height:20px"/>
                   	<img src="/content/dam/logitech/common/header/blue-overlay.svg" alt="" class="dark-logo" style="height:20px"/>
                </a>
@@ -517,7 +540,7 @@
 
 
 			<li>
-               <a href="https://www.ultimateears.com/en-gb" target="_blank" aria-label="Ultimate Ears">
+               <a href="https://www.ultimateears.com/en-gb" target="_blank" rel="noopener noreferrer" aria-label="Ultimate Ears">
                   	<img src="/content/dam/logitech/common/header/ue-bottom.svg" alt="" class="light-logo" style="height:20px"/>
                   	<img src="/content/dam/logitech/common/header/ue-overlay.svg" alt="" class="dark-logo" style="height:20px"/>
                </a>
@@ -534,7 +557,7 @@
 
 
 			<li>
-               <a href="https://www.jaybirdsport.com/en-gb" target="_blank" aria-label="Jaybird">
+               <a href="https://www.jaybirdsport.com/en-gb" target="_blank" rel="noopener noreferrer" aria-label="Jaybird">
                   	<img src="/content/dam/logitech/common/header/jaybird-bottom.svg" alt="" class="light-logo" style="height:20px"/>
                   	<img src="/content/dam/logitech/common/header/jaybird-overlay.svg" alt="" class="dark-logo" style="height:20px"/>
                </a>
@@ -797,13 +820,13 @@
 
 												<ul class="sub-menu third-level" id="myacc-sublinks-lvl3-1">
 													<li class="">
-														<a class="" href="https://support.logi.com/hc/requests/new?ticket_form_id=360000994993" target="_blank">
+														<a class="" href="https://support.logi.com/hc/requests/new?ticket_form_id=360000994993" target="_blank" rel="noopener noreferrer">
 															<span>Register a Product</span>
 														</a>
 													</li>
 												
 													<li class="">
-														<a class="" href="https://support.logi.com/hc/articles/360024361233" target="_blank">
+														<a class="" href="https://support.logi.com/hc/articles/360024361233" target="_blank" rel="noopener noreferrer">
 															<span>Downloads</span>
 														</a>
 													</li>
@@ -853,7 +876,7 @@
 													</li>
 												
 													<li class="">
-														<a class="" href="https://support.logi.com/hc/articles/360025903194" target="_blank">
+														<a class="" href="https://support.logi.com/hc/articles/360025903194" target="_blank" rel="noopener noreferrer">
 															<span>Spare Parts</span>
 														</a>
 													</li>
@@ -1034,7 +1057,7 @@
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/vc-accessories" target="_self">Accessories</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/webcams" target="_self">Webcams</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/webcams?filters=3798" target="_self">Webcams</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/products/sync.html" target="_self">Logitech Sync Device Management</a></li>
 	                                                </ul>
@@ -1258,11 +1281,13 @@
 	                                            <div class="mp-level">
 	                                                <a tabindex="-1" href="javascript:;" class="mp-back"><span class="aem-logi-icon-chevron-left" aria-hidden="true"></span>Partners</a>
 	                                                <ul class="sub-menu third-level">
-	                                                    <li><a tabindex="-1" title="" href="https://partners.logitech.com/english_uk/" target="_self">Channel Partners</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/partner-program.html" target="_self">Channel Partners</a></li>
 	                                                
-	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/partners.html" target="_self">Technology Partners</a></li>
+	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/partners.html" target="_self">Alliance Partners</a></li>
 	                                                
 	                                                    <li><a tabindex="-1" title="" href="/en-gb/video-collaboration/resellers.html" target="_self">Find A Reseller</a></li>
+	                                                
+	                                                    <li><a tabindex="-1" title="" target="_self">Log In</a></li>
 	                                                </ul>
 	                                            </div>
 	                                        </li>
@@ -1541,7 +1566,7 @@
 		        <!-- Primary Navigation Sub Component w/ Dropdown -->
 		        <nav class="component-desktop-menu container hidden-xs hidden-sm" aria-label="Primary">
 		            <div class="relative-wrapper">
-		                <a tabindex="0" id="hero-logo-container" href="http://www.logitech.com/en-gb" class="hero-logo-container" data-analytics-title="hero-logo-container" aria-label="Animated Logitech Logo">
+		                <a tabindex="0" id="hero-logo-container" href="http://www.logitech.com/en-gb" class="hero-logo-container" data-analytics-title="hero-logo-container" aria-label="Logitech">
 		                    <div id="hero-logo-ani" class="hero-logo-ani animating stoppedAnimation"></div>
 		                </a>
 		                <div class="desktop-nav-top" role="tablist">
@@ -2133,7 +2158,7 @@
             
                 
     <li>
-        <a class="" href="/en-gb/webcams">
+        <a class="" href="/en-gb/webcams?filters=3798">
             Webcams
         </a>
     </li>
@@ -3105,7 +3130,7 @@
             
                 
     <li>
-        <a class="" href="https://partners.logitech.com/english_uk/">
+        <a class="" href="/en-gb/video-collaboration/partner-program.html">
             Channel Partners
         </a>
     </li>
@@ -3114,7 +3139,7 @@
                 
     <li>
         <a class="" href="/en-gb/video-collaboration/partners.html">
-            Technology Partners
+            Alliance Partners
         </a>
     </li>
 
@@ -3123,6 +3148,14 @@
     <li>
         <a class="" href="/en-gb/video-collaboration/resellers.html">
             Find A Reseller
+        </a>
+    </li>
+
+            
+                
+    <li>
+        <a class="">
+            Log In
         </a>
     </li>
 
@@ -4648,7 +4681,7 @@ summary {
 						<ul>
 							<li><a href="/en-gb/about.html" data-analytics-title="about">About</a></li>
 						
-							<li><a href="http://www.logitech.com/en-gb/footer/privacy">Privacy + Security</a></li>
+							<li><a href="https://www.logitech.com/en-gb/footer/privacy">Privacy + Security</a></li>
 						
 							<li><a href="/en-gb/sustainability.html" data-analytics-title="sustainability">Sustainability</a></li>
 						
@@ -4659,11 +4692,11 @@ summary {
 						<ul>
 							<li><a href="/en-gb/about/contact.html" data-analytics-title="contact">Contact</a></li>
 						
-							<li><a href="http://www.logitech.com/en-gb/utilities/sitemap">Sitemap</a></li>
+							<li><a href="https://www.logitech.com/en-gb/utilities/sitemap">Sitemap</a></li>
 						
-							<li><a href="https://logitech-uk.connect.studentbeans.com/uk" target="_blank">Students</a></li>
+							<li><a href="https://logitech-uk.connect.studentbeans.com/uk" target="_blank" rel="noopener noreferrer">Students</a></li>
 						
-							<li><a href="http://partner.logitech.com/" target="_blank">Partner Portal</a></li>
+							<li><a href="https://partner.logitech.com/" target="_blank" rel="noopener noreferrer">Partner Portal</a></li>
 						</ul>
 					</div>
 
@@ -4671,22 +4704,22 @@ summary {
 
 					<div class="col-xs-6 col-sm-3">
 						<ul>
-							<li><a href="http://blog.logitech.com" target="_blank">Blog</a></li>
+							<li><a href="https://blog.logitech.com" target="_blank" rel="noopener noreferrer">Blog</a></li>
 						
-							<li><a href="http://ir.logitech.com" target="_blank">Investors</a></li>
+							<li><a href="https://ir.logitech.com" target="_blank" rel="noopener noreferrer">Investors</a></li>
 						
-							<li><a href="https://press.logitech.eu/en-gb" target="_blank">Press</a></li>
+							<li><a href="https://press.logitech.eu/en-gb" target="_blank" rel="noopener noreferrer">Press</a></li>
 						
 							<li><a href="/en-gb/promo/affiliate-program.html" data-analytics-title="affiliate-program">Affiliate Program</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-6 col-sm-3">
 						<ul>
-							<li><a href="https://jobs.jobvite.com/logitech" target="_blank">Careers</a></li>
+							<li><a href="https://jobs.jobvite.com/logitech" target="_blank" rel="noopener noreferrer">Careers</a></li>
 						
-							<li><a href="http://www.logitech.com/en-gb/footer/terms-of-use">Terms of Use</a></li>
+							<li><a href="https://www.logitech.com/en-gb/footer/terms-of-use">Terms of Use</a></li>
 						
-							<li><a href="/en-gb/my-account/order-faqs.html#returns-cancellations" target="_blank" data-analytics-title="order-faqs">Return Policy</a></li>
+							<li><a href="/en-gb/my-account/order-faqs.html#returns-cancellations" data-analytics-title="order-faqs">Return Policy</a></li>
 						
 							<li><a href="/en-gb/social-impact.html" data-analytics-title="social-impact">Social Impact</a></li>
 						</ul>
@@ -4699,21 +4732,21 @@ summary {
 					<div class="col-xs-12 col-sm-6">
 						<div class="social-icons">
 							
-    <a title="Like Us on Facebook" href="http://www.facebook.com/Logitech" target="_blank" data-analytics-title="like-us-on-facebook">
+    <a aria-label="Like Us on Facebook" href="https://www.facebook.com/Logitech" target="_blank" rel="noopener noreferrer" data-analytics-title="like-us-on-facebook">
         <img alt="" src="/content/dam/logitech/common/facebook.svg"/>
-    </a>
+    </a> 
 
 						
 							
-    <a title="Follow on Twitter" href="http://www.twitter.com/Logitech" target="_blank" data-analytics-title="follow-on-twitter">
+    <a aria-label="Follow on Twitter" href="https://www.twitter.com/Logitech" target="_blank" rel="noopener noreferrer" data-analytics-title="follow-on-twitter">
         <img alt="" src="/content/dam/logitech/common/twitter.svg"/>
-    </a>
+    </a> 
 
 						
 							
-    <a title="Follow Us on Instagram" href="http://instagram.com/logitech?ref=badge" target="_blank" data-analytics-title="follow-us-on-instagram">
+    <a aria-label="Follow Us on Instagram" href="https://instagram.com/logitech?ref=badge" target="_blank" rel="noopener noreferrer" data-analytics-title="follow-us-on-instagram">
         <img alt="" src="/content/dam/logitech/common/instagram-logo.svg"/>
-    </a>
+    </a> 
 
 						</div>
 					</div>
@@ -4748,7 +4781,10 @@ summary {
                     <label>
                         <input type="checkbox" name="subscription-disclaimer"/>
                         <span class="checkmark"></span>
-                        <span class="checkmark-label">Yes, I want to receive news and product emails. Read our <a href="/privacy" target="_blank">privacy policy</a>.</span>
+                        <span class="checkmark-label">
+							
+							Yes, I want to receive news and product emails. Read our <a target="_blank" rel="noopener noreferrer" href="/privacy">privacy policy</a>
+						</span>
                     </label>
                 </div>
                 <div class="email-subscription-message js-email-subscription-message"></div>
@@ -4773,7 +4809,7 @@ summary {
 					</div>
 					<div class="col-xs-12 col-sm-6">
 						<div class="language">
-							<a href="http://www.logitech.com/en-gb/change-location" data-analytics-title="locale-selector">
+							<a href="https://www.logitech.com/en-gb/change-location" data-analytics-title="locale-selector">
 								<span class="icon flag-spritesheet flag-GB"></span>
 								<span class="label">United Kingdom</span>
 							</a>
@@ -4815,7 +4851,7 @@ summary {
 <script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.543d214c88dfa6f4a3233b630c82d875.js"></script>
 <script src="/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js"></script>
 <script src="/etc.clientlibs/foundation/clientlibs/shared.min.9f3716b2c473fd53ab31b1caa53131a8.js"></script>
-<script src="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.64b1c9a1207cd6abbc1b1a7e3d2c67f3.js"></script>
+<script src="/etc.clientlibs/logitech/clientlibs/logitech-pagelibs.min.718b6cb7c74a4a3ac6ad3b5f7429db45.js"></script>
 
 
 
