@@ -32,14 +32,15 @@ ga('send', 'pageview');
 var k42 = false;
 var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
 
-(function() {
-  var gads = document.createElement('script');
-  gads.async = true;
-  gads.type = 'text/javascript';
-  gads.src = 'https://www.googletagservices.com/tag/js/gpt.js';
-  var node = document.getElementsByTagName('script')[0];
-  node.parentNode.insertBefore(gads, node);
-})();
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("/", "");
+    folder = folder.substr(0, folder.indexOf("/"));
+    return folder;
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
 
 var snhb = snhb || {}; snhb.queue = snhb.queue || [];
 snhb.options = {
@@ -50,85 +51,6 @@ snhb.options = {
                allOutputEnabled: false,
                autoStartAuction: false,
                };
-
-// GPT slots
-var gptAdSlots = [];
-googletag.cmd.push(function() {
-  googletag.pubads().disableInitialLoad();               
-  googletag.pubads().enableSingleRequest();
-  var leaderMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Vertical Tablet ad
-    addSize([512, 0], [468, 60]). 
-    // Horizontal Tablet
-    addSize([812, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [468, 60]).
-    // Normal Desktop
-    addSize([1182, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1457, 0], [[728, 90], [970, 90]]).build();
-  gptAdSlots[0] = googletag.defineSlot('/16833175/MainLeaderboard', [[728, 90], [970, 90]], 'div-gpt-ad-1422003450156-2').
-    defineSizeMapping(leaderMapping).addService(googletag.pubads());
-  var skyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [320, 50]). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 1050]]).build();
-  gptAdSlots[1] = googletag.defineSlot('/16833175/WideSkyScraper', [[160, 600], [300, 600], [300, 1050]], 'div-gpt-ad-1422003450156-5').
-    defineSizeMapping(skyMapping).addService(googletag.pubads());
-  var stickyMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], []). 
-    // Tablet ad
-    addSize([983, 0], [120, 600]). 
-    // Desktop
-    addSize([1143, 0], [160, 600]).   
-    // Large Desktop
-    addSize([1683, 0], [[160, 600], [300, 600], [300, 250]]).build();
-  gptAdSlots[4] = googletag.defineSlot('/16833175/StickySkyScraper', [[300, 600], [120, 600], [300, 250], [160, 600]], 'div-gpt-ad-1472547360578-0').
-    defineSizeMapping(stickyMapping).addService(googletag.pubads());
-  var mcontMapping = googletag.sizeMapping().
-    // Mobile ad
-    addSize([0, 0], [[300, 250], [336, 280], [320, 50]]). 
-    // Vertical Tablet ad
-    addSize([522, 0], [[300, 250], [336, 280], [468, 60]]). 
-    // Horizontal Tablet
-    addSize([782, 0], [728, 90]).
-    // Small Desktop
-    addSize([1025, 0], [[300, 250], [336, 280], [468, 60]]).
-    // Normal Desktop
-    addSize([1167, 0], [728, 90]).
-    // Large Desktop and bigger ad
-    addSize([1472, 0], [[728, 90], [970, 90], [970, 250]]).build();
-  gptAdSlots[5] = googletag.defineSlot('/16833175/MidContent', [[300, 250], [336, 280]], 'div-gpt-ad-1493883843099-0').
-    defineSizeMapping(mcontMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var bmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], [[300, 250], [336, 280]]). 
-    // Large Desktop
-    addSize([1272, 0], [[300, 250], [336, 280], [970, 250]]).build();
-    gptAdSlots[2] = googletag.defineSlot('/16833175/BottomMediumRectangle', [[300, 250], [336, 280], [970, 250]], 'div-gpt-ad-1422003450156-0').
-    defineSizeMapping(bmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  var rbmrMapping = googletag.sizeMapping().
-    // Smaller
-    addSize([0, 0], []). 
-    // Large Desktop
-    addSize([1007, 0], [[300, 250], [336, 280]]).build();
-  gptAdSlots[3] = googletag.defineSlot('/16833175/RightBottomMediumRectangle', [[300, 250], [336, 280]], 'div-gpt-ad-1422003450156-3').
-    defineSizeMapping(rbmrMapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
-  googletag.pubads().setTargeting("content",(function () {
-    var folder = location.pathname;
-    folder = folder.replace("/", "");
-    folder = folder.substr(0, folder.indexOf("/"));
-    return folder;
-  })());
-});  
 
 </script>
 <!-- begin cmp -->
@@ -155,7 +77,7 @@ __cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 <script>
   snhb.queue.push(function(){
 
-    snhb.addAdditionalAdSlotsToRefresh(gptAdSlots);
+    snhb.startAuction(["main_leaderboard", "wide_skyscraper", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]);
 
   });
 </script>
@@ -574,10 +496,10 @@ function w3_getStyleValue(elmnt,style) {
     <div class='w3-col l10 m12' id='main'>
       <div id='mainLeaderboard' style='overflow:hidden;'>
         <!-- MainLeaderboard-->
-        
-        <div id='div-gpt-ad-1422003450156-2'>
-          <script type='text/javascript'>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-2'); });</script>
-        </div>
+
+        <!--<pre>main_leaderboard, all: [728,90][970,90][320,50][468,60]</pre>-->
+        <div id="snhb-main_leaderboard-0"></div>
+        <!-- adspace leaderboard -->
        
       </div>
 <h1>Terms of Service</h1>
@@ -587,23 +509,25 @@ function w3_getStyleValue(elmnt,style) {
 </div>
 <hr>
 <h2>Overview</h2>
-<p>This website is operated by Refsnes Data as. Throughout the site, the terms 
-&quot;we&quot;, &quot;us&quot; and &quot;our&quot; refer to Refsnes Data as. Refsnes Data as offers this 
-website, including all information, tools and services available from this site 
-to you, the user, conditioned upon your acceptance of all terms, conditions, 
-policies and notices stated here.</p>
-<p>By visiting our site and/ or purchasing something from us, you engage in our 
+<p>The website and the solutions are operated and managed by separate entities. 
+Refsnes Data offers the website (w3schools.com) including all its content, 
+information, and related tools. The solutions (Such as Spaces, Courses, and My 
+learning) and billing system are operated by W3schools Network. The two entities 
+are separately responsible for the services that they provide, manage and 
+operate.</p>
+<p>Throughout the site, the terms &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refer to Refsnes Data and 
+W3schools Network.</p>
+<p>By visiting our site and/or purchasing something from us, you engage in our 
 &quot;Service&quot; and agree to be bound by the following terms and conditions (&quot;Terms of 
 Service&quot;, &quot;Terms&quot;), including those additional terms and conditions and policies 
 referenced herein and/or available by hyperlink. These Terms of Service apply to 
 all users of the site, including without limitation users who are browsers, 
-vendors, customers, merchants, and/ or contributors of content.</p>
+vendors, customers, merchants, and/or contributors of content.</p>
 <p>Please read these Terms of Service carefully before accessing or using our 
-website. By accessing or using any part of the site, you agree to be bound by 
-these Terms of Service. If you do not agree to all the terms and conditions of 
-this agreement, then you may not access the website or use any services. If 
-these Terms of Service are considered an offer, acceptance is expressly limited 
-to these Terms of Service.</p>
+website or services. By accessing or using any part of the site, you agree to be 
+bound by these Terms of Service. If you do not agree to all the terms and 
+conditions of this agreement, then you may not access the website or use any 
+services.</p>
 <p>Any new features or tools which are added to the current site shall also be 
 subject to the Terms of Service. You can review the most current version of the 
 Terms of Service at any time on this page. We reserve the right to update, 
@@ -616,22 +540,32 @@ following the posting of any changes constitutes acceptance of those changes.</p
 <p>By agreeing to these Terms of Service, you represent that you are at least 
 the age of majority in your state or province of residence, or that you are the 
 age of majority in your state or province of residence and you have given us 
-your consent to allow any of your minor dependents to use this site. </p>
+your consent to allow any of your minor dependents to use this site.</p>
+<p>Access to services may require you to register an account. This could require 
+you to provide information about yourself such as name, email address and credit 
+card details. The account information and the use of data is subject to our 
+Privacy Policy (https://www.w3schools.com/about/about_privacy.asp)</p>
 <p>You may not use our products for any illegal or unauthorized purpose nor may 
 you, in the use of the Service, violate any laws in your jurisdiction (including 
-but not limited to copyright laws). </p>
+but not limited to copyright laws). You are responsible for complying with any 
+law, rules, and regulations applicable to you.</p>
 <p>You must not transmit any worms or viruses or any code of a destructive 
-nature. </p>
-<p>A breach or violation of any of the Terms will result in an immediate 
-termination of your Services. </p>
+nature.</p>
+<p>A breach or violation of any of our Terms can result in an immediate 
+termination of your Services. We reserve the right to remove or restrict your 
+account and to remove content such as websites and other user-created data at 
+any time at our sole and absolute discretion.</p>
 <hr>
 <h2>General Conditions</h2>
 <p>We reserve the right to refuse service to anyone for any reason at any time.</p>
-<p>You understand that your content (not including credit card information), may 
-be transferred unencrypted and involve (a) transmissions over various networks; 
-and (b) changes to conform and adapt to technical requirements of connecting 
-networks or devices. Credit card information is always encrypted during transfer 
-over networks.</p>
+<p>You understand that your content may be transferred unencrypted and involve 
+(a) transmissions over various networks, and (b) changes to conform and adapt to 
+technical requirements of connecting networks or devices.</p>
+<p>Credit card information is always encrypted during transfer over networks, 
+and are processed and handled by our selected Payment Service Providers. We only 
+preserve the last four-digit and expiry date of your Credit card. This is, among 
+other things, to let you know in advance if your Credit card is soon to expire, 
+so that we can assure the continuous running of your Services with us.</p>
 <p>You agree not to reproduce, duplicate, copy, sell, resell or exploit any 
 portion of the Service, use of the Service, or access to the Service or any 
 contact on the website through which the service is provided, without express 
@@ -640,7 +574,7 @@ written permission by us.</p>
 will not limit or otherwise affect these Terms. </p>
 <hr>
 <h2>Fair Use</h2>
-<p>Fair use defines Refsnes Data as' exceptions to the rights protected by copyright 
+<p>Fair use defines our exceptions to the rights protected by copyright 
 laws.</p>
 <p>Fair use of W3Schools includes using copyrighted material:</p>
 <ul>
@@ -671,8 +605,8 @@ laws.</p>
 </ul>
 <hr>
 <h2>Accuracy, Completeness and Timeliness of Information </h2>
-<p>We are not responsible if information made available on this site is not 
-accurate, complete or current.</p>
+<p>We are not responsible if information made available on our sites is 
+incomplete or invalid.</p>
 <p>The material on this site is provided for general information only and should 
 not be relied upon or used as the sole basis for making decisions without 
 consulting primary, more accurate, more complete or more timely sources of 
@@ -684,30 +618,27 @@ obligation to update any information on our site. You agree that it is your
 responsibility to monitor changes to our site.</p>
 <p>If you discover that the site or its contents contains errors, please contact 
 us so these can be corrected.</p>
-<p>Contact address:</p>
-<p>help@w3schools.com</p>
+<p>Contact address:<br>help@w3schools.com</p>
 <hr>
 <h2>Modifications to the Service and Prices </h2>
-<p>Prices for our products are subject to change without notice.</p>
-<p>We reserve the right at any time to modify or discontinue the Service (or any 
-part or content thereof) without notice at any time.</p>
+<p>By agreeing to a subscription price, you will remain on that price for the 
+duration of the payment term. Prices are subject to change at the end of your 
+next payment term, and we will do our best to clearly inform you about any price 
+change in advance of your next billing period.</p>
 <p>We shall not be liable to you or to any third-party for any modification, 
 price change, suspension or discontinuance of the Service. </p>
 <hr>
 <h2>Products or Services</h2>
 <p>Certain products or services may be available exclusively online through the 
 website.</p>
-<p>We have made every effort to display as accurately as possible the colors and 
-images of our products that appear at the store. We cannot guarantee that your 
-computer monitor's display of any color will be accurate.</p>
 <p>We reserve the right, but are not obligated, to limit the sales of our 
 products or Services to any person, geographic region or jurisdiction. We may 
 exercise this right on a case-by-case basis.</p>
 <p>We reserve the right to limit the quantities of any products or services that 
 we offer. All descriptions of products or product pricing are subject to change 
-at anytime without notice, at the sole discretion of us.</p>
+at any time without notice, at the sole discretion of us.</p>
 <p>We reserve the right to discontinue any product at any time. Any offer for 
-any product or service made on this site is void where prohibited. </p>
+any product or service made on this site is void where prohibited.</p>
 <p>We do not warrant that the quality of any products, services, information, or 
 other material purchased or obtained by you will meet your expectations, or that 
 any errors in the Service will be corrected. </p>
@@ -722,7 +653,7 @@ and/or shipping address.</p>
 notify you by contacting the e&#8209;mail and/or billing address/phone number provided 
 at the time the order was made.</p>
 <p>We reserve the right to limit or prohibit orders that, in our sole judgment, 
-appear to be placed by dealers, resellers or distributors. </p>
+appear to be placed by dealers, resellers or distributors.</p>
 <p>You agree to provide current, complete and accurate purchase and account 
 information for all purchases made on our site. You agree to promptly update 
 your account and other information, including your email address and credit card 
@@ -731,7 +662,7 @@ contact you as needed.</p>
 <hr>
 <h2>Optional Tools</h2>
 <p>We may provide you with access to third-party tools over which we neither 
-monitor nor have any control nor input.&nbsp; You acknowledge and agree that we 
+monitor nor have any control nor input. You acknowledge and agree that we 
 provide access to such tools &quot;as is&quot; and &quot;as available&quot; without any warranties, 
 representations or conditions of any kind and without any endorsement. We shall 
 have no liability whatsoever arising from or relating to your use of optional 
@@ -739,7 +670,7 @@ third-party tools.</p>
 <p>Any use by you of optional tools offered through the site is entirely at your 
 own risk and discretion and you should ensure that you are familiar with and 
 approve of the terms on which tools are provided by the relevant third-party 
-provider(s). </p>
+provider(s).</p>
 <p>We may also, in the future, offer new services and/or features through the 
 website (including, the release of new tools and resources). Such new features 
 and/or services shall also be subject to these Terms of Service. </p>
@@ -751,7 +682,7 @@ materials from third-parties.</p>
 are not affiliated with us. We are not responsible for examining or evaluating 
 the content or accuracy and we do not warrant and will not have any liability or 
 responsibility for any third-party materials or websites, or for any other 
-materials, products, or services of third-parties. </p>
+materials, products, or services of third-parties.</p>
 <p>We are not liable for any harm or damages related to the purchase or use of 
 goods, services, resources, content, or any other transactions made in 
 connection with any third-party websites. Please review carefully the 
@@ -760,28 +691,35 @@ you engage in any transaction. Complaints, claims, concerns, or questions
 regarding third-party products should be directed to the third-party. </p>
 <hr>
 <h2>User Comments, Feedback, and Other Submissions</h2>
+<p>You are the owner of the content that you create with our services. The 
+content is managed by you and you are responsible for its compliance. This 
+includes copyright responsibility; you must agree that you only will create 
+content that you own and/or have the right to use. We keep the right to change 
+or delete user content at any time.</p>
 <p>If, at our request, you send certain specific submissions (for example 
 contest entries) or without a request from us you send creative ideas, 
 suggestions, proposals, plans, or other materials, whether online, by email, by 
 postal mail, or otherwise (collectively, 'comments'), you agree that we may, at 
 any time, without restriction, edit, copy, publish, distribute, translate and 
 otherwise use in any medium any comments that you forward to us.</p>
-<p>We are and shall be under no obligation (1) to maintain any comments in 
-confidence; (2) to pay compensation for any comments; or (3) to respond to any 
-comments. </p>
+<p>We are and shall be under no obligation (1) to maintain any user content in 
+confidence; (2) to pay compensation for any user content; or (3) to respond to 
+any comments.</p>
 <p>We may, but have no obligation to, monitor, edit or remove content that we 
 determine in our sole discretion are unlawful, offensive, threatening, libelous, 
 defamatory, pornographic, obscene or otherwise objectionable or violates any 
-party's intellectual property or these Terms of Service. </p>
-<p>You agree that your comments will not violate any right of any third-party, 
-including copyright, trademark, privacy, personality or other personal or 
-proprietary right. You further agree that your comments will not contain 
-libelous or otherwise unlawful, abusive or obscene material, or contain any 
-computer virus or other malware that could in any way affect the operation of 
-the Service or any related website. You may not use a false e&#8209;mail address, 
-pretend to be someone other than yourself, or otherwise mislead us or 
-third-parties as to the origin of any comments. You are solely responsible for 
-any comments you make and their accuracy.</p>
+party's intellectual property or these Terms of Service.</p>
+<p>You agree that your user content will not violate any right of any 
+third-party, including copyright, trademark, privacy, personality or other 
+personal or proprietary right. You further agree that your user content will not 
+contain libelous or otherwise unlawful, abusive or obscene material, or contain 
+any computer virus or other malware that could in any way affect the operation 
+of the Service or any related website. This includes any intellectual property, 
+copyrighted material, trademark, patents and privacy rights.</p>
+<p>You may not use a false e&#8209;mail address, pretend to be someone other than 
+yourself, or otherwise mislead us or third-parties as to the origin of any user 
+content. You are solely responsible for any user content you make and their 
+accuracy.</p>
 <p>We take no responsibility and assume no liability for any comments posted by 
 you or any third-party.</p>
 <hr>
@@ -802,7 +740,7 @@ Service or on any related website, including without limitation, pricing
 information, except as required by law. No specified update or refresh date 
 applied in the Service or on any related website, should be taken to indicate 
 that all information in the Service or on any related website has been modified 
-or updated. </p>
+or updated.</p>
 <hr>
 <h2>Prohibited Uses</h2>
 <p>In addition to other prohibitions as set forth in the Terms of Service, you 
@@ -829,16 +767,19 @@ website for violating any of the prohibited uses.</p>
 <p>We do not guarantee, represent or warrant that your use of our service will 
 be uninterrupted, timely, secure or error-free.</p>
 <p>We do not warrant that the results that may be obtained from the use of the 
-service will be accurate or reliable. You agree that from time to time we 
-may remove the service for indefinite periods of time or cancel the service at 
-any time, without notice to you.</p>
+service will be accurate or reliable. You agree that from time to time we may 
+remove the service for indefinite periods of time or cancel the service at any 
+time, without notice to you.</p>
+<p>You are the creator and owner of your user content and have the sole 
+responsibility for it. You confirm that Refsnes Data is not in any way liable 
+for your user content.</p>
 <p>You expressly agree that your use of, or inability to use, the service is at 
 your sole risk. The service and all products and services delivered to you 
 through the service are (except as expressly stated by us) provided 'as is' and 
 'as available' for your use, without any representation, warranties or 
 conditions of any kind, either express or implied, including all implied 
 warranties or conditions of merchantability, merchantable quality, fitness for a 
-particular purpose, durability, title, and non-infringement. </p>
+particular purpose, durability, title, and non-infringement.</p>
 <p>In no case shall Refsnes Data as, our directors, officers, employees, 
 affiliates, agents, contractors, interns, suppliers, service providers or 
 licensors be liable for any injury, loss, claim, or any direct, indirect, 
@@ -854,16 +795,16 @@ damage of any kind incurred as a result of the use of the service or any content
 even if advised of their possibility. Because some states or jurisdictions do 
 not allow the exclusion or the limitation of liability for consequential or 
 incidental damages, in such states or jurisdictions, our liability shall be 
-limited to the maximum extent permitted by law. </p>
+limited to the maximum extent permitted by law.</p>
 <hr>
 <h2>Indemnification</h2>
-<p>You agree to indemnify, defend and hold harmless Refsnes Data as and our 
-parent, subsidiaries, affiliates, partners, officers, directors, agents, 
-contractors, licensors, service providers, subcontractors, suppliers, interns 
-and employees, harmless from any claim or demand, including reasonable 
-attorneys' fees, made by any third-party due to or arising out of your breach of 
-these Terms of Service or the documents they incorporate by reference, or your 
-violation of any law or the rights of a third-party.</p>
+<p>You agree to indemnify, defend and hold harmless Refsnes Data as, owners, 
+subsidiaries, affiliates, partners, officers, directors, agents, contractors, 
+licensors, service providers, subcontractors, suppliers, interns and employees, 
+harmless from any claim or demand, including reasonable attorneys' fees, made by 
+any third-party due to or arising out of your breach of these Terms of Service 
+or the documents they incorporate by reference, or your violation of any law or 
+the rights of a third-party.</p>
 <hr>
 <h2>Entire Agreement</h2>
 <p>The failure of us to exercise or enforce any right or provision of these 
@@ -884,7 +825,7 @@ Norway. </p>
 <hr>
 <h2>Changes to Terms of Service</h2>
 <p>You can review the most current version of the Terms of Service at any time 
-at this page. </p>
+at this page.</p>
 <p>We reserve the right, at our sole discretion, to update, change or replace 
 any part of these Terms of Service by posting updates and changes to our 
 website. It is your responsibility to check our website periodically for 
@@ -910,13 +851,9 @@ us at help@w3schools.com</p>
 <div class="sidesection">
   <div id="skyscraper">
   
-    <div id="div-gpt-ad-1422003450156-5">
-      <script>
-      googletag.cmd.push(function() {
-      googletag.display('div-gpt-ad-1422003450156-5');
-      });
-      </script> 
-    </div>
+    <!--<pre>wide_skyscraper, all: [160,600][300,600][320,50][120,600][300,1050]</pre>-->
+    <div id="snhb-wide_skyscraper-0"></div>
+    <!-- adspace wide-->
   
   </div>
 </div>
@@ -1067,13 +1004,24 @@ href="https://courses.w3schools.com" target="_blank" onclick="ga('send', 'event'
   <div id="stickyadcontainer">
     <div style="position:relative;margin:auto;">
       
-        <script>
-        if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
-        document.write("<div id='div-gpt-ad-1472547360578-0'>");
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1472547360578-0'); });
-        document.write("</div>");
-        }
-        </script>
+      <!--<pre>sidebar_sticky, desktop: [120,600][160,600][300,600][300,250]</pre>-->
+      <div id="snhb-sidebar_sticky-0"></div>
+      <script>
+          if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+            // adspace sticky
+            if (document.getElementById("snhb-mid_content-0")) {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky", "mid_content" ]); });
+            }
+            else {
+              snhb.queue.push(function(){  snhb.startAuction(["sidebar_sticky"]); });
+            }
+          }
+          else {
+              if (document.getElementById("snhb-mid_content-0")) {
+                snhb.queue.push(function(){  snhb.startAuction(["mid_content"]); });
+              }
+          }
+      </script>  
       
     </div>
   </div>
@@ -1091,17 +1039,14 @@ href="https://courses.w3schools.com" target="_blank" onclick="ga('send', 'event'
 <hr>
 
 <div style="overflow:auto">
-  <!-- BottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-0'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-0'); });
-    </script>
-  </div>
-  <!-- RightBottomMediumRectangle -->
-  <div class="bottomad" id='div-gpt-ad-1422003450156-3'>
-    <script type='text/javascript'>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1422003450156-3'); });
-    </script>
+  <div class="bottomad">
+    <!-- BottomMediumRectangle -->
+    <!--<pre>bottom_medium_rectangle, all: [970,250][300,250][336,280]</pre>-->
+    <div id="snhb-bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
+    <!-- adspace bmr -->
+    <!-- RightBottomMediumRectangle -->
+    <!--<pre>right_bottom_medium_rectangle, desktop: [300,250][336,280]</pre>-->
+    <div id="snhb-right_bottom_medium_rectangle-0" style="padding:0 10px 10px 0;float:left;width:auto;"></div>
   </div>
 </div>
 
@@ -1272,7 +1217,7 @@ While using W3Schools, you agree to have read and accepted our <a href="/about/a
 </div>
 
 </div>
-<script src="/lib/w3schools_footer.js?update=20210429"></script>
+<script src="/lib/w3schools_footer.js?update=20210430"></script>
 
 <script>
 
