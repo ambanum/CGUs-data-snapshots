@@ -42,7 +42,7 @@
 <!-- category dns-prefetch start -->	
 <!-- category dns-prefetch end -->
 
-<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/8fb40ba0f01fa3a91417fa92f2630f86/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl07'><script src='/wro/768c3c370b31cfb8673abe954f828f59/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
+<link rel='stylesheet' type='text/css' href='/wro/70c2a1159270a219ebccf9b48b5c7d7/HEAD-CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/wro/4154e74168da6c614f14cf7c917d2261/SITE_CATEGORY-worldmarket.css?minimize=true'><link rel='stylesheet' type='text/css' href='/text/inc/css/global.css?v=rl07-1'><script src='/wro/768c3c370b31cfb8673abe954f828f59/HEAD.js?minimize=true'></script><link href="https://plus.google.com/u/0/b/116195269616123281160" rel="publisher"/>
 <script>
    var limitSkuQtyExceeded= "Limit {0} per customer. Please adjust your quantity.";
    var limitSkuQtyMap = {};
@@ -20663,10 +20663,12 @@ privacy@cpwm.com<br>
 	});
 </script></div>
 	                    <script type="text/javascript">
-							if(window.location.href.indexOf("customer-service") > -1) {
+							if(window.location.href.indexOf("customer-service") > -1 && window.location.href.indexOf("tracking+your+order") < 0) {
 								$("#leftNavContainer").addClass("content-left-nav");
 								var selectedTab = $('.ml-navleft-cats-active a').text();
 								$(".wme-dashboard-tabs-toggle > a span:first-child").text(selectedTab);
+							}else{
+								$('.wme-dashboard-tabs-toggle').hide();
 							}
 						</script>
                     </div>
@@ -22382,13 +22384,13 @@ console.log('**** DataLayer - Ensighten Reporting - End ****');
     MarketLive.Reporting = MarketLive.Reporting || {};
     MarketLive.Reporting.templateType = 'GATEWAY';
 </script>
-<script type='text/javascript' src='/wro/65f52b470b45da4ce59bcf39f3ccd431/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/507ca080cc11bc2a05ed14ce10b0f5fd/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
+<script type='text/javascript' src='/wro/65f52b470b45da4ce59bcf39f3ccd431/FOOTER.js?minimize=true'></script><script type='text/javascript' src='/wro/17169ebd1bfd3b11e7bb119ccd36f07a/FOOTER-LIVECHAT-PRD.js?minimize=true'></script><script type='text/javascript' src='/wro/1fde65f3e242512e45d078a85e6a926/P2P.js?minimize=true'></script><script src="https://portal.afterpay.com/afterpay.js" async></script>
 <script src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
 <script type='text/javascript'>
     window.MarketLive = window.MarketLive || {};
     MarketLive.Base = MarketLive.Base || {};
     MarketLive.Base.section = 'CATEGORY';
-	MarketLive.Base.initTextVersion('rl07');
+	MarketLive.Base.initTextVersion('rl07-1');
 	MarketLive.Base.initSourceCodes('');
 	MarketLive.Base.setStorePickupEnabled(false);
 	MarketLive.Base.setStoreSTSEnabled(false);
