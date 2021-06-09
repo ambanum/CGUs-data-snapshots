@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+
+  <title>Nouvelle Offre PME</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+
+  <link rel="stylesheet" type="text/css" media="all" href="/js/jquery/jquery-ui/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" media="all" id="theme-site" href="/css/adhesion-default-colors.css" />
+
+  <!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+      filter: none;
+    }
+  </style>
+  <![endif]-->
+
+  <script type="text/javascript" src="/js/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery.form.min.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery-ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="/js/jquery/jquery.placeholder.js"></script>
+  <script type="text/javascript" src="/js/adhesion.js"></script>
+  <script type="text/javascript" src="/js/adhesion-accessibilite.js"></script>
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136646577-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-136646577-1');
+  </script>
+</head>
+<body>
+<div id="header">
+</div>
+
+
+<div id="main_container">
+  <div id="main_content">
+    <header class="membership__header">
+      <div class="accessibility-tool__wrapper">
+        <div class="container">
+          <div class="accessibility-tool__bar">
+            <p class="accessibility-tool__description">
+              Ici nous nous adaptons à vos paramètres et c'est encore mieux de pouvoir les changer :
+            </p>
+            <button id="accessibility-tool__open" class="accessibility--btn-open js-accessibility--btn-open"  aria-expanded="false" aria-controls="accessibility-tool__content">Accessibilité<span class="icon-arrow-down accessibility--btn-open__icon" aria-hidden="true"></span>
+            </button>
+            <div id="accessibility-tool__content" class="accessibility-tool__content js-accessibility__content js-hidden">
+              <button id="accessibility-tool__close" class="accessibility--btn-close js-accessibility--btn-close">
+                <span class="visually-hidden">Fermer l'outil d'accessibilité</span>
+                <span class="icon-close" aria-hidden="true"></span>
+              </button>
+              <!-- accessibility contrasts -->
+              <div class="accessibility-tool__block">
+                <p class="accessibility-tool__block__title" id="accessibility-contrasts">Contrastes</p>
+                <div class="accessibility-tool__block__buttons">
+                  <button id="contraste-default" class="accessibility__button active" aria-describedby="accessibility-contrasts">
+                    Défaut<span class="visually-hidden"> (bouton activé)</span>
+                  </button>
+                  <button id="contraste-renforce" class="accessibility__button" aria-describedby="accessibility-contrasts">
+                    Renforcés
+                  </button>
+                  <button id="contraste-inverse" class="accessibility__button" aria-describedby="accessibility-contrasts">
+                    Inversés
+                  </button>
+                </div>
+              </div>
+
+              <!-- accessibility line spacing -->
+              <div class="accessibility-tool__block">
+                <p class="accessibility-tool__block__title" id="accessibility-spacing">Interlignage</p>
+                <div class="accessibility-tool__block__buttons">
+                  <button id="default-spacing" class="accessibility__button active" aria-describedby="accessibility-spacing">
+                    Défaut<span class="visually-hidden"> (bouton activé)</span>
+                  </button>
+                  <button id="higher-spacing" class="accessibility__button" aria-describedby="accessibility-spacing">
+                    Augmenté
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="unavailable--page">
+
+          <h1>Service Indisponible</h1>
+          <p class="unavailable--text">
+            Les formulaires de préadhésion et d'adhésion <br>
+            sont actuellement indisponibles.  <br>
+            Merci de renouveler votre visite ultérieurement.<br>
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
