@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Code of Conduct | PrivacySpy</title>
+  <link rel='stylesheet' href='https://d33wubrfki0l68.cloudfront.net/css/99885b3bbe158e50f80e5a11a8b03737684b45ba/static/css/base.css'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/static/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/static/img/fingerprint-icon.svg" rel="icon" type="image/svg+xml" />
+  <link href="/static/img/favicon-32x32.png" rel="alternate icon" sizes="32x32" type="image/png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link href="https://chrome.google.com/webstore/detail/ppembnadnhiknioggbglgiciihgmkmnd" rel="chrome-webstore-item" />
+  <meta name="description"
+      content="PrivacySpy is an open project to grade and monitor privacy policies for convenience and accountability. Let&#x27;s make informed data privacy decisions." />
+  <meta property="og:title" content="Code of Conduct | PrivacySpy" />
+  <meta property="og:description"
+      content="PrivacySpy is an open project to grade and monitor privacy policies for convenience and accountability. Let&#x27;s make informed data privacy decisions." />
+  <meta property="og:image:secure_url" content="https://privacyspy.org/static/img/graphic.png" />
+  <meta property="og:site_name" content="PrivacySpy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://privacyspy.org/static/img/graphic.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://privacyspy.org" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:domain" content="privacyspy.org" />
+  <meta name="twitter:title" content="Code of Conduct | PrivacySpy" />
+  <meta name="twitter:description"
+      content="PrivacySpy is an open project to grade and monitor privacy policies for convenience and accountability. Let&#x27;s make informed data privacy decisions." />
+  <meta name="twitter:image" content="https://privacyspy.org/static/img/graphic.png" />
+  <script src='https://d33wubrfki0l68.cloudfront.net/bundles/e60c8cb4e21bc3146f8594613eb56f70cbeeae3a.js'></script>
+</head>
+
+<body class="antialiased">
+  <div class="container relative max-w-screen-lg min-h-screen px-6 pt-2 mx-auto md:px-12">
+    <div id="navbar" class="relative" style="z-index: 5;">
+      <header class="flex justify-between h-12 pt-6 pb-8 sm:items-center">
+        <div class="flex items-center justify-between w-full p-0">
+          <div class="flex flex-row items-center flex-grow">
+            <a href="/">
+              <div class="mr-6 select-none">
+                <h3 class="inline-flex items-center pt-1 text-lg">
+                  <img src="https://d33wubrfki0l68.cloudfront.net/996d6df1d46671892c1444ca4ec2162f57ce8de9/0368f/static/img/logo-black.svg" class="w-6 h-6 mr-2 opacity-40">
+                  <p class="font-semibold">PrivacySpy</p>
+                </h3>
+              </div>
+            </a>
+          </div>
+          <div class="mr-4 sm:mr-8 sm:flex-grow">
+            <div class="w-2/3 md:relative sm:w-full" style="z-index: 10;">
+                <button class="p-1 text-gray-600 outline-none appearance-none fas fa-search sm:hidden dropdown-toggler"
+                    title="Open search..." tabindex="0" onclick="toggleMobileDropdown('search-container')"></button>
+                <div class="hidden mobile-dropdown focus-within:block sm:block" id="search-container">
+                    <input
+                        class="absolute right-0 w-full h-8 px-2 py-1 mt-4 placeholder-gray-400 border border-gray-200 rounded outline-none appearance-none sm:w-64 search-container-focus sm:mt-0 md:inset-auto sm:block sm:static hover:border-gray-300 focus:border-gray-400"
+                        type="search" placeholder="Search (press /)" id="searchBox" oninput="onSearchInput()">
+                    <div class="absolute right-0 hidden w-full mt-16 bg-white border border-gray-200 rounded sm:w-64 sm:inset-auto sm:mt-2 hover:border-gray-300 mobile-dropdown"
+                        id="searchDropdown">
+                        <div id="searchNoResults" class="hidden p-2 text-gray-600 sm:text-sm">No results. Try another query.</div>
+                        <div class="hidden p-2" id="searchResults"></div>
+                    </div>
+                </div>
+            </div>      </div>
+          <div class="lg:hidden">
+            <button type="button"
+              class="block text-gray-600 dropdown-toggler hover:text-gray-800 focus:text-white focus:outline-none"
+              id="dropdown-button" onclick="toggleMobileDropdown('nav-menu')">
+              <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" data-target="nav-menu">
+                <path id="burger" fill-rule="evenodd"
+                  d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                  style="display: none;" />
+                <path id="cross" fill-rule="evenodd"
+                  d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="nav-menu" class="hidden mobile-dropdown lg:block">
+          <div
+            class="absolute right-0 items-center inline-block p-4 mt-6 bg-white border border-gray-100 rounded lg:rounded-none lg:mt-0 lg:text-left lg:float-none lg:static lg:p-0 lg:flex lg:bg-none lg:border-none lg:shadow-none"
+            style="z-index: 11;">
+            <a href="/directory/" class="block mr-8 md:text-sm lg:pt-0 hover:text-blue-500">Directory</a>
+            <a href="/extension/" class="block pt-2 mr-8 md:text-sm lg:pt-0 hover:text-blue-500">Extension</a>
+            <a href="/contribute/" class="block pt-2 mr-8 md:text-sm lg:pt-0 hover:text-blue-500">Contribute</a>
+            <a href="/about/" class="block pt-2 md:text-sm lg:pt-0 hover:text-blue-500">About</a>
+          </div>
+        </div>
+      </header>
+    </div>    <noscript>
+      <aside class="aside ~info">
+        <strong>You're visiting PrivacySpy without JavaScript enabled.</strong> Great&mdash;that's better for privacy. This is just a heads up that while the site should still work normally for you, some features&mdash;like search (which is done client-side) and icons&mdash;won't display properly.
+      </aside>
+    </noscript>
+    <hr class="h-16 sep" />
+<main class="max-w-2xl mx-auto content">
+  <h1 class="text-5xl font-extrabold mb-8">Code of Conduct</h1>
+  <h2>Our Pledge</h2>
+<p>In the interest of fostering an open and welcoming environment, we as
+contributors and maintainers pledge to making participation in our project and
+our community a harassment-free experience for everyone, regardless of age, body
+size, disability, ethnicity, sex characteristics, gender identity and expression,
+level of experience, education, socio-economic status, nationality, personal
+appearance, race, religion, or sexual identity and orientation.</p>
+<h2>Our Standards</h2>
+<p>Examples of behavior that contributes to creating a positive environment
+include:</p>
+<ul>
+<li>Using welcoming and inclusive language</li>
+<li>Being respectful of differing viewpoints and experiences</li>
+<li>Gracefully accepting constructive criticism</li>
+<li>Focusing on what is best for the community</li>
+<li>Showing empathy towards other community members</li>
+</ul>
+<p>Examples of unacceptable behavior by participants include:</p>
+<ul>
+<li>The use of sexualized language or imagery and unwelcome sexual attention or
+advances</li>
+<li>Trolling, insulting/derogatory comments, and personal or political attacks</li>
+<li>Public or private harassment</li>
+<li>Publishing others' private information, such as a physical or electronic
+address, without explicit permission</li>
+<li>Other conduct which could reasonably be considered inappropriate in a
+professional setting</li>
+</ul>
+<h2>Our Responsibilities</h2>
+<p>Project maintainers are responsible for clarifying the standards of acceptable
+behavior and are expected to take appropriate and fair corrective action in
+response to any instances of unacceptable behavior.</p>
+<p>Project maintainers have the right and responsibility to remove, edit, or
+reject comments, commits, code, wiki edits, issues, and other contributions
+that are not aligned to this Code of Conduct, or to ban temporarily or
+permanently any contributor for other behaviors that they deem inappropriate,
+threatening, offensive, or harmful.</p>
+<h2>Scope</h2>
+<p>This Code of Conduct applies both within project spaces and in public spaces
+when an individual is representing the project or its community. Examples of
+representing a project or community include using an official project e-mail
+address, posting via an official social media account, or acting as an appointed
+representative at an online or offline event. Representation of a project may be
+further defined and clarified by project maintainers.</p>
+<h2>Enforcement</h2>
+<p>Instances of abusive, harassing, or otherwise unacceptable behavior may be
+reported by contacting the project team at <a href="mailto:secure@politiwatch.org">secure@politiwatch.org</a>. All
+complaints will be reviewed and investigated and will result in a response that
+is deemed necessary and appropriate to the circumstances. The project team is
+obligated to maintain confidentiality with regard to the reporter of an incident.
+Further details of specific enforcement policies may be posted separately.</p>
+<p>Project maintainers who do not follow or enforce the Code of Conduct in good
+faith may face temporary or permanent repercussions as determined by other
+members of the project's leadership.</p>
+<h2>Attribution</h2>
+<p>This Code of Conduct is adapted from the <a href="https://www.contributor-covenant.org">Contributor Covenant</a>, version 1.4,
+available at <a href="https://www.contributor-covenant.org/version/1/4/code-of-conduct.html">https://www.contributor-covenant.org/version/1/4/code-of-conduct.html</a></p>
+<p>For answers to common questions about this code of conduct, see
+<a href="https://www.contributor-covenant.org/faq">https://www.contributor-covenant.org/faq</a></p>
+
+</main>
+    <hr class="pb-48 sep" />
+    <footer class="absolute bottom-0 left-0 right-0 pb-6 mx-6 border-t border-gray-100 md:mx-12">
+      <div class="flex flex-col items-center mt-4 text-xs md:justify-between md:flex-row">
+        <div class="flex flex-row order-2 mt-4 md:order-1 md:mt-0">
+          <div>&copy; 2021
+            <a href="https://politiwatch.org/" class="hover:text-blue-500">Politiwatch</a>
+          </div>
+          <div class="ml-3 md:ml-6">
+            <a href="/terms-and-privacy/" class="hover:text-blue-500">Terms &amp; Privacy</a>
+          </div>
+          <div class="ml-3 md:ml-6">
+            <a href="/conduct/" class="hover:text-blue-500">Code of Conduct</a>
+          </div>
+        </div>
+        <div class="order-1 md:order-2">
+          <a href="https://github.com/politiwatch/privacyspy" target="_blank">
+            <img src="https://d33wubrfki0l68.cloudfront.net/996d6df1d46671892c1444ca4ec2162f57ce8de9/0368f/static/img/logo-black.svg" class="w-12 h-12 md:w-10 md:h-10 opacity-10 hover:opacity-20">
+          </a>
+        </div>
+        <div class="flex flex-row order-3 mt-4 md:mt-0">
+          <div class="mr-3 md:mr-6">
+            <a href="https://creativecommons.org/licenses/by/4.0/" class="hover:text-blue-500">CC BY</a>
+          </div>
+          <div class="mr-3 md:mr-6">
+            <a href="/api/" class="hover:text-blue-500">API</a>
+          </div>
+          <div class="mr-3 md:mr-6">
+            <a href="/contributors/" class="hover:text-blue-500">Contributors</a>
+          </div>
+          <div>
+            Built by
+            <a href="https://miles.land" class="hover:text-blue-500">Miles</a>
+            and
+            <a href="https://igor.fyi" class="hover:text-blue-500">Igor</a>
+          </div>
+        </div>
+      </div>
+    </footer>  </div>
+  <noscript><img src="https://shynet.rmrm.io/ingress/e7ad854a-17c3-43a7-9f28-d1790e4b9965/pixel.gif"></noscript> <script src="https://shynet.rmrm.io/ingress/e7ad854a-17c3-43a7-9f28-d1790e4b9965/script.js"></script>
+</body>
+
+</html>
