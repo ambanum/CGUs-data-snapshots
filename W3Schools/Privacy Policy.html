@@ -1149,6 +1149,7 @@ function finishedPage() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       y = this.responseText;
+      console.log("her:" + y);
       x = y.substr(0, 1);
       if (x == "O") {
         console.log(x);
@@ -1226,6 +1227,7 @@ function activateMYPAGE(cc, obj) {
       document.getElementById("mypage2_circle2").setAttribute("d", loginDrawCircle(26, 35, 24, 0, degrees));
     }
   }
+
   ga('send', 'event', 'user', 'login');
 }
 function checkIfMypage2IsInView() {
