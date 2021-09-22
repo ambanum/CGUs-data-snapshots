@@ -1360,10 +1360,8 @@ function finishedPage() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       y = this.responseText;
-      console.log("her:" + y);
       x = y.substr(0, 1);
       if (x == "O") {
-        console.log(x);
         registerPoint(x);
       } else {
         console.log("Z");
