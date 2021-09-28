@@ -615,7 +615,7 @@ July 14, 2020</p>
         height: 100%;
         background: url("/static-assets/images/graphic-talk.svg") no-repeat;
         background-size: auto 100%;
-        background-position: -10px center;
+        background-position: -20px center;
         padding-right: 8px !important;
         padding-left: 8px !important;
     }
@@ -658,6 +658,11 @@ July 14, 2020</p>
         background: transparent;
         border: 0 !important;
     }
+    @media screen and (min-width: 320px) {
+        .announcement-banner__inner {
+            background-position: 0 center;
+        }
+    }
     @media screen and (min-width: 400px) {
         .announcement-banner__content {
             font-size: 16px;
@@ -673,28 +678,19 @@ July 14, 2020</p>
         }
     }
     @media screen and (min-width: 768px) {
-        .announcement-banner__inner {
-            background-size: auto 130%;
-        }
         .announcement-banner__content {
             font-size: 18px;
         }
     }
     @media screen and (min-width: 968px) {
+        .announcement-banner__inner {
+            width: 100%;
+        }
         .announcement-banner__content {
             text-align: left;
         }
-        .announcement-banner__inner {
-            width: 100%;
-            background-size: auto 120%;
-        }
         .announcement-banner__text--lg {
             display: block;
-        }
-    }
-    @media screen and (min-width: 1024px) {
-        .announcement-banner__inner {
-            background-size: auto 130%;
         }
     }
 </style>
