@@ -60,8 +60,8 @@ img.emoji {
 <link rel='stylesheet' id='icons-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/css/icons.css?ver=1.0' media='all' />
 <link rel='stylesheet' id='slick-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/css/slick.css?ver=1.8.1' media='all' />
 <link rel='stylesheet' id='zoomifyStyle-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/css/zoomify.min.css?ver=0.2.5' media='all' />
-<link rel='stylesheet' id='style-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/style.css?ver=1634054337' media='all' />
-<link rel='stylesheet' id='new-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/css/new_styles.css?ver=1634054337' media='all' />
+<link rel='stylesheet' id='style-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/style.css?ver=1634580073' media='all' />
+<link rel='stylesheet' id='new-css'  href='https://pubmatic.com/wp-content/themes/pubmatic/css/new_styles.css?ver=1634580073' media='all' />
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js?ver=3.1.1' id='jquery-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/slick.min.js?ver=1.8.1' id='slick-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/zoomify.min.js?ver=0.2.5' id='zoomifyScript-js'></script>
@@ -653,6 +653,7 @@ img.emoji {
 			</div>
 </div>
 
+
 		<!-- footer -->
 
 		<footer class="footer hidden-print text-white ">
@@ -790,7 +791,7 @@ img.emoji {
 <script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/jquery.matchHeight-min.js?ver=1.0' id='matchHeight-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/jquery.waypoints.min.js?ver=4.0.1' id='waypoints-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/jquery.waitforimages.js?ver=4.0.1' id='waitForImages-js'></script>
-<script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/scripts.js?ver=1634054338' id='scripts-js'></script>
+<script type='text/javascript' src='https://pubmatic.com/wp-content/themes/pubmatic/js/scripts.js?ver=1634580073' id='scripts-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-includes/js/wp-embed.min.js?ver=5.7.3' id='wp-embed-js'></script>
 <script type='text/javascript' src='https://pubmatic.com/wp-content/plugins/pardot/js/asyncdc.min.js?ver=5.7.3' id='pddc-js'></script>
 
@@ -805,34 +806,6 @@ b.type = "text/javascript";b.async = true;
 b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
 s.parentNode.insertBefore(b, s);})();
 </script>
-
-<!-- Add the Following Code to the Parent Webpage in which the Pardot Embed HTML code resides -->
-<script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
-<script>
-  var leadObj = {};
-  //Below is the event listener that will listen for the Pardot Events
-  window.addEventListener("message", receiveMessage, false);
-  function receiveMessage(event) {
-    // Form data ready, update leadObj
-    if (event.data && event.data.message === "PARDOT_DATA_READY" && event.data.data) {
-      leadObj = event.data.data; // Update leadObj
-      // Parse query params
-      const urlParams = new URLSearchParams(window.location.search);
-      for (const [key, value] of urlParams.entries()) {
-        leadObj[key] = value;
-      }
-    }
-    // Form was submitted and validated, call ChiliPiper
-    if (event.data && event.data.message === "PARDOT_FORM_SUCCESS") {
-      // Account domain and router name are from Step #1 - no need to change it here
-      ChiliPiper.submit(leadObj["CPTenantDomain"], leadObj["CPTenantRouter"], {
-        map: true,
-        lead: leadObj,
-      });
-    }
-  }
-</script> 
-
 <noscript>
 <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3076002&fmt=gif" />
 </noscript>
