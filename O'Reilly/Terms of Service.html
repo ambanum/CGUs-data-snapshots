@@ -6,7 +6,7 @@
 
   	<title>Terms of Service - O'Reilly Media</title>
 	<meta name="description" content=" " />
-	<meta name="date" content="2021-10-21" />
+	<meta name="date" content="2021-10-24" />
 	<meta name="search_date" content="2019-01-09" />
 	<meta name="search-title" content="Terms of Service - O'Reilly Media" />
 	<meta name="pagename" content="Terms of Service - O'Reilly Media" />
@@ -598,7 +598,10 @@ document.write('</a>' + ending);
         if(match) {
           rect = match.getBoundingClientRect();
           anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
-          window.scrollTo(window.pageXOffset, anchorOffset);
+          // Wait 1ms and scroll. It wasn't consistently scrolling immediately.
+          setTimeout(function(){
+            window.scroll(window.pageXOffset, anchorOffset);
+          }, 1); 
 
           // Add the state to history as-per normal anchor links
           if(HISTORY_SUPPORT && pushToHistory) {
