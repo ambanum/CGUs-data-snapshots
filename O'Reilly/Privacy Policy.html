@@ -6,7 +6,7 @@
 
   	<title>Privacy Policy as of 7/29/21 - O'Reilly Media</title>
 	<meta name="description" content=" " />
-	<meta name="date" content="2021-10-21" />
+	<meta name="date" content="2021-10-24" />
 	<meta name="search_date" content="2021-07-29" />
 	<meta name="search-title" content="Privacy Policy as of 7/29/21 - O'Reilly Media" />
 	<meta name="pagename" content="Privacy Policy as of 7/29/21 - O'Reilly Media" />
@@ -1246,7 +1246,10 @@ MktoForms2.whenReady(function(form) {
         if(match) {
           rect = match.getBoundingClientRect();
           anchorOffset = window.pageYOffset + rect.top - this.getFixedOffset();
-          window.scrollTo(window.pageXOffset, anchorOffset);
+          // Wait 1ms and scroll. It wasn't consistently scrolling immediately.
+          setTimeout(function(){
+            window.scroll(window.pageXOffset, anchorOffset);
+          }, 1); 
 
           // Add the state to history as-per normal anchor links
           if(HISTORY_SUPPORT && pushToHistory) {
