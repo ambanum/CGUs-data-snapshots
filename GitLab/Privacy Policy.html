@@ -10,7 +10,7 @@
     function OptanonWrapper() { }
   //]]>
 </script>
-<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=83328c51'></script>
+<script async=false defer=false id=mermaidscriptsource src='/javascripts/libs/mermaid.min.js?cacheBust=819c7173'></script>
 
 <script>
 window.dataLayer = window.dataLayer || []
@@ -91,8 +91,8 @@ GitLab
 <link href='https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.7/tiny-slider.css' rel=stylesheet />
 <link href="/stylesheets/styles.css" rel=stylesheet /><link href="/stylesheets/highlight.css" rel=stylesheet />
 
-<link href="/stylesheets/slippers0-14-12.css?cacheBust=83328c51" rel=stylesheet />
-<script src='/javascripts/logrocket.js?cacheBust=83328c51'></script>
+<link href="/stylesheets/slippers0-14-12.css?cacheBust=819c7173" rel=stylesheet />
+<script src='/javascripts/logrocket.js?cacheBust=819c7173'></script>
 <link href="/stylesheets/handbook.css" rel=stylesheet />
 <link href="/stylesheets/navigation-helpers.css" rel=stylesheet />
 </head>
@@ -101,7 +101,7 @@ GitLab
 <iframe height=0 src='//www.googletagmanager.com/ns.html?id=GTM-NJXWQL' style='display:none;visibility:hidden' width=0></iframe>
 </noscript>
 <nav class='slp-sticky slp-left-0 slp-right-0 slp-top-0 slp-bg-white slp-z-90' id=global-nav style='z-index: 1000000;'>
-<div class=navigation-mobile style="padding-top: 0.3rem;">
+<div id=navigation-mobile class=navigation-mobile style="padding-top: 0.3rem;">
 <header
 class="slp-flex slp-justify-between slp-items-center slp-overflow-hidden slp-fill-current"
 >
@@ -583,8 +583,20 @@ Get Free Trial
   color: #FFF !important;
   background: #333 !important;
 }
+
+@media (min-width: 1200px) {
+  #navigation-mobile {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1300px) {
+  #navigation-mobile {
+    display: none !important;
+  }
+}
 </style>
-<div class="slp-hidden nav:slp-flex slp-pl-16 slp-pr-16 slp-bg-white">
+<div id=navigation-desktop class="slp-hidden nav:slp-flex slp-pl-16 slp-pr-16 slp-bg-white">
 <a href="/" title=GitLab class="slp-mr-48 nav:slp-mr-24">
 <img src="/images/icons/logos/slp-logo.svg" class="nav:slp-hidden lg:slp-inline-block slp-relative" style="top: 0.8rem;">
 <img src="/images/icons/logos/slp-icon.svg" class="slp-pl-16 slp-p-8 slp-relative nav:slp-inline-block lg:slp-hidden" style="top: 0.5rem; height: 6.0rem; width: 6.5rem;">
@@ -1455,6 +1467,19 @@ Login
 </a>
 </div>
 </div>
+<style>
+@media (min-width: 1200px) {
+  #navigation-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1300px) {
+  #navigation-desktop {
+    display: flex !important;
+  }
+}
+</style>
 </nav>
 <div class='search-box js-search-box'>
 <i class='fa fa-search search-box-icon'></i>
@@ -1700,11 +1725,11 @@ View
 <img src="/images/by-sa.svg" alt="Creative Commons License"/>
 </a>
 </div>
-<script src="/javascripts/libs/jquery.min.js?cacheBust=83328c51"></script>
-<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=83328c51"></script>
-<script src="/javascripts/libs/bootstrap.min.js?cacheBust=83328c51"></script>
-<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=83328c51"></script>
-<script src="/javascripts/scripts.js?cacheBust=83328c51"></script>
+<script src="/javascripts/libs/jquery.min.js?cacheBust=819c7173"></script>
+<script src="/javascripts/libs/jquery-migrate-3.3.0.min.js?cacheBust=819c7173"></script>
+<script src="/javascripts/libs/bootstrap.min.js?cacheBust=819c7173"></script>
+<script src="/javascripts/libs/jqBootstrapValidation.js?cacheBust=819c7173"></script>
+<script src="/javascripts/scripts.js?cacheBust=819c7173"></script>
 <script>
   //<![CDATA[
     $.ajax({
