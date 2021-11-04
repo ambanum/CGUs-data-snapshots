@@ -49,9 +49,9 @@
 
 
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="A4DPE6MRx4eQ7ofK98DZqyDozJhXLpkHM3IehjeXlVd+6++JLNFKYuSfDsVnKqFLP69hxjfc/oUiUXIPTIyZOA==" />
+<meta name="csrf-token" content="l7Na4VEQh2+vFx2t9h3NJ/ErSBz9fP7450IXe+NDvhC2fxN9FYUaAUStzBGO4on6v5hVKacXBaRs+nP2g3cfuQ==" />
 
-<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-814c269acd86567baca302a20eb967b5e7a258c72e49e1586d1bc190671c7136.css" />
+<link rel="stylesheet" media="screen" href="https://assets.whicdn.com/assets/application-8c00fececfea329ebe372656fffead0a289b4301442582826397c8f933b46b49.css" />
 
 <script type="text/javascript">
 
@@ -73,12 +73,16 @@
   }
 
   window.whiConfig = {
+      download_throttle: {"watermark_free":{"limit":5,"ttl":86400.0},"allowed":{"limit":250,"ttl":2592000.0}},
+
+      premiumSubscriptionDisabled: true,
 
     pagePath: 'static_pages/tos',
     authenticated : 'no',
     article_features : '',
     disable_anonymous_registration : false,
     user_authenticated : false,
+    user_premium : false,
     experiment : null,
     current_locale : "en",
     new_language_notification : false,
@@ -160,7 +164,7 @@
   </head>
 
 
-  <body class="loggedout  body-xs-double-navbar " >
+  <body class="loggedout  body-xs-double-navbar  download-restrictions" >
     <a class="hide-element hide-element-focusable" href="#main">Skip to the main content</a>
 
     <!-- container used to render all modals in -->
@@ -246,11 +250,17 @@
 
           <!-- search field -->
           <div class="col span-12">
-            <form id="image-search-form" class="navbar-search" action="/search/entries" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-              <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
-              <label for="image-search-form" class="sr-only">Search for things you love...</label>
-              <input type="search" name="query" id="text" placeholder="Search for things you love..." title="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
-</form>          </div> <!-- /search field -->
+            <div class="navbar-search">
+              <form id="image-search-form" action="/search/entries" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+                <input type="hidden" name="ac" id="ac" value="0" class="autocomplete-clicked" />
+                <label for="image-search-form" class="sr-only">Search for things you love...</label>
+                <div style="display: flex; flex-wrap: nowrap; flex-direction: row;">
+                  <div style="flex-grow: 5;">
+                    <input type="search" name="query" id="text" placeholder="Search for things you love..." title="Search for things you love..." maxlength="140" class="js-autocomplete-field searchfield btn btn-block btn-small text-left bg-offwhite input-icon icon-search" />
+                  </div>
+                </div>
+</form>            </div>
+          </div> <!-- /search field -->
         </div> <!-- grid-flex -->
       </div> <!-- /col main area -->
 
@@ -294,6 +304,7 @@
 
               </div>
             </div> <!-- /more stuff -->
+
           </div>
         </div>
 
@@ -963,11 +974,9 @@ _qevents.push({
   <script type="text/javascript" src="//b-code.liadm.com/a-028f.min.js" async="true" charset="utf-8"></script>
 
 
-<script src="https://assets.whicdn.com/assets/application-af61b39475edce95c6e86030224015ae825e1987e866e172efdc69eb48fa0c6f.js"></script>
+<img id="watermark" style="display:none;" crossorigin="anonymous" alt="" src="https://assets.whicdn.com/assets/watermark-56ebdee3706e83465e91b7edbb43ffd898582f7c9ad14b3fddd2e67c24aea6ba.svg" />
 
-  <script>
-  $.getScript("https://s.skimresources.com/js/28678X866187.skimlinks.js")
-</script>
+<script src="https://assets.whicdn.com/assets/application-ccbda4f0dcf3d2f004b3a8291210dcd6d06a8eefa9f126cff24fb377a67b0d0e.js"></script>
 
 
   <script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script>
@@ -983,7 +992,7 @@ _qevents.push({
 <script>
 var WeHeartIt = require('/modules/whi')
 new WeHeartIt({
-  views : ["sidebar", "branchio", "cookie_warning", "user_profile/profile", "modal", "banner_join", "article_preview", "block_warning", "share_modal", "static/app", "static/contact", "static/postcards", "static/left_share_buttons", "static/facebook_timeline", "static/postcards_gallery", "static/popular", "static/download_heart_button", "recaptcha", "toggle_element", "postcard", "follow_collection_button", "actions/new_entry_form_sign_in", "actions/heart_success", "actions/new_entry_form", "actions/add_image", "actions/too_many_tags", "registration/testimonials", "registration/join_tracker", "registration/login", "registration/email_signup", "registration/registration", "user_set", "dummy_ads", "widgets", "user_account/find_friends", "user_account/email_suggestion", "user_account/edit_notices", "user_account/facebook_timeline", "user_account/link_account", "user_account/verify_age", "user_account/edit_profile", "heart_button_new_entry", "reactions", "facebook_widget", "modals/collections_modal", "modals/add_to_collection_modal", "modals/create_new_collection_modal", "text_preview", "prompts/app_promo_ad", "interstitial", "onboarding_inspirations", "article_draft", "heart_button_container", "dashboard/box_contacts", "dashboard/userFilter", "collaborate", "entry/add_to_collection", "entry/create_entry_set", "entry/youtube_autoplay", "entry/share_buttons", "entry/entry_ftue", "entry/entry", "entry/entry_group", "entry/tag_form", "entry/report_button", "follow_button", "navbar/notifications", "navbar/topbar_touches", "navbar/navbar", "catalog/catalog", "catalog/vimeo_thumbs", "inbox", "doubleclick_ads", "admin_tools", "click_out", "new_account/new_confirmation", "inspirations/inspirations", "dropdown", "floating_window", "heart_button", "activation", "email_bounced", "postcard_button", "file_preview"],
+  views : ["dropdown", "user_account/edit_notices", "user_account/email_suggestion", "user_account/link_account", "user_account/verify_age", "user_account/find_friends", "user_account/edit_profile", "user_account/facebook_timeline", "article_preview", "entry/report_button", "entry/entry_ftue", "entry/add_to_collection", "entry/create_entry_set", "entry/entry", "entry/entry_group", "entry/youtube_autoplay", "entry/tag_form", "entry/share_buttons", "dummy_ads", "heart_button_container", "activation", "dashboard/userFilter", "dashboard/box_contacts", "download_image", "static/contact", "static/download_heart_button", "static/left_share_buttons", "static/postcards", "static/app", "static/postcards_gallery", "static/facebook_timeline", "static/popular", "prompts/app_promo_ad", "prompts/premium_account_promo", "postcard_button", "share_modal", "follow_button", "widgets", "admin_tools", "user_set", "modals/create_new_collection_modal", "modals/add_to_collection_modal", "modals/collections_modal", "modal", "banner_join", "doubleclick_ads", "block_warning", "toggle_element", "cookie_warning", "navbar/topbar_touches", "navbar/notifications", "navbar/navbar", "heart_button_new_entry", "postcard", "follow_collection_button", "new_account/new_confirmation", "heart_button", "actions/add_image", "actions/new_entry_form", "actions/too_many_tags", "actions/heart_success", "actions/new_entry_form_sign_in", "click_out", "text_preview", "onboarding_inspirations", "floating_window", "branchio", "registration/email_signup", "registration/testimonials", "registration/registration", "registration/login", "registration/join_tracker", "email_bounced", "file_preview", "sidebar", "article_draft", "recaptcha", "interstitial", "collaborate", "reactions", "catalog/catalog", "catalog/vimeo_thumbs", "user_profile/profile", "inbox", "inspirations/inspirations", "facebook_widget"],
   modules : [
     'notifications',
     'search',
