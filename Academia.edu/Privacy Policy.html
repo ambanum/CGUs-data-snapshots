@@ -140,7 +140,7 @@
 
 
     <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="cW1ECy8eq47cWmcqsf9xr78dx6FFcAo6Czqn7O5JAasSJd+ykFYufhuP1Doq8QUfDhCkmy4p3hfSZW2R/cseKQ==" />
+<meta name="csrf-token" content="7OVl6IGVuZ5DdSeuCbB3WUkMQKJyycEm5cl2NPgBp3/Da1oihw0DdgwFBLhbdoLL/irtDIGAirQy9RaFga+R3w==" />
 
     
   <meta name="description" content="Academia.edu is a place to share and follow research." />
@@ -149,7 +149,7 @@
 <script>
   var $controller_name = 'static';
   var $rails_env = 'production';
-  var $app_rev = 'd8c89db37e1d267b8e501f60d2a29ba15778226a';
+  var $app_rev = '6d0cd7caeda5121d4a3361fcb29332eec7360604';
   var $domain = 'academia.edu';
   var $app_host = "academia.edu";
   var $asset_host = "academia-assets.com";
@@ -163,8 +163,8 @@
 
 
     window.Aedu = { hit_data: null };
-    window.Aedu.SiteStats = {"premium_universities_count":16961,"monthly_visitors":"31 million","monthly_visitor_count":31300000,"monthly_visitor_count_in_millions":31,"user_count":169182011,"paper_count":22432889,"paper_count_in_millions":22,"page_count":432000000,"page_count_in_millions":432,"pdf_count":16500000,"pdf_count_in_millions":16};
-    window.Aedu.serverRenderTime = new Date(1636496048000);
+    window.Aedu.SiteStats = {"premium_universities_count":16961,"monthly_visitors":"31 million","monthly_visitor_count":31300000,"monthly_visitor_count_in_millions":31,"user_count":169182249,"paper_count":22432889,"paper_count_in_millions":22,"page_count":432000000,"page_count_in_millions":432,"pdf_count":16500000,"pdf_count_in_millions":16};
+    window.Aedu.serverRenderTime = new Date(1636501535000);
     window.Aedu.isUsingCssV1 = false;
     window.Aedu.enableLocalization = true
 
@@ -199,7 +199,7 @@
 
      <script src="//a.academia-assets.com/assets/webpack_bundles/webpack_libraries_and_infrequently_changed.wjs-bundle-7c385629bb2532a55890b8f41b48f3c439906aa41d9e3b034db1ac1a3a8df797.js"></script>
 
-    <script src="//a.academia-assets.com/assets/webpack_bundles/core_webpack.wjs-bundle-46c3ee603f3c0cabf82220196f726b9971ca3006ea810f49373897daef77aa90.js"></script>
+    <script src="//a.academia-assets.com/assets/webpack_bundles/core_webpack.wjs-bundle-d2cd2c949c2552d8a75ad76e51427f001845c56d6c78f2d6dad0a8d6144811cc.js"></script>
 
   <!--[if lt IE 10]>
     <script src="//a.academia-assets.com/assets/ie9_polyfills-ccb518f0850bf8f4a890a1be8d6c94fae535ed9d8e753c88bd1b054d85c96929.js"></script>
@@ -742,7 +742,13 @@ Aedu.autocompleteSearch = new AutocompleteSearch({el: '.js-SiteSearch-form'});</
   <div class="container">
     <div class="col-md-8 col-md-offset-2">
       <div class="static-page-padded-content no-reset">
-        <p>Last Updated: October 8, 2020</p>
+        <style>
+  .two-equal-columns th,
+  .two-equal-columns td {
+    width: 50%;
+  }
+</style>
+<p>Last Updated: October 28, 2020</p>
 <p>Academia.edu (“Academia”) provides a searchable repository to allow our users to search and share academic resources. This Privacy Policy is designed to help you understand how we collect, use, and share your personal information and to help you understand and exercise your privacy rights. Academia is the controller for the personal information we process, unless otherwise stated. For information on how to contact us, please refer to Section 13 below.</p>
 <p><a href="#scope">1. Scope</a></p>
 <p><a href="#personal-information-we-collect">2. Personal Information We Collect</a></p>
@@ -768,9 +774,11 @@ Aedu.autocompleteSearch = new AutocompleteSearch({el: '.js-SiteSearch-form'});</
 <p>We may collect the following personal information that you provide to us.</p>
 <ul>
 <li><p><strong>Registration</strong>. When you register with us through the Services to become an Academia.edu Member, we collect your name, email address, and password. You may choose to add additional information in your profile such as your telephone number, postal address, biography, institutional affiliates, research interests, profile picture, social media accounts, and your CV. You may also choose to upload your papers and BibTeX file to your profile.</p></li>
+<li><strong>Course Creator Information.</strong> We may collect personal information from you if you provide course content as a course creator, including your name, biography, employment and background information, and other information and supporting materials related to the content you provide.</li>
 </ul>
 <ul>
 <li><p><strong>Purchases</strong>. We may collect personal information and details associated with your purchases, including payment information. Any payments made via our Services are processed by third-party payment processors. We do not directly collect or store any payment card information entered through our Services, but we may receive information associated with your payment card information (e.g., your billing details).</p></li>
+<li><p><strong>Course Creator Payment Information</strong>. We may collect personal information from you if you are a course creator to issue payments for the course content that you provide. This information may include tax information such as tax identification numbers, residency information, and other information necessary for tax purposes. We may also collect your bank account information and your contact information in order to issue the payments.</p></li>
 <li><p><strong>Your Communications with Us</strong>. We may collect personal information, such as email addresses, phone numbers, or mailing addresses, when you request information about our Services, register for our communications, request customer or technical support, apply for a job or otherwise communicate with us.</p></li>
 <li><p><strong>Surveys</strong>. We may contact you to participate in surveys. If you decide to participate, you may be asked to provide certain information, which may include personal information.</p></li>
 <li><p><strong>Interactive Features</strong>. We and others who use our Services may collect personal information that you submit or make available through our interactive features (e.g., making your Academia analytics or mentions/citations public, messaging and chat features, commenting functionalities, forums, blogs, and social media pages). Any information you provide on the public sections of these features will be considered “public”, unless otherwise required by applicable law, and is not subject to the privacy protections referenced herein.</p></li>
@@ -813,6 +821,8 @@ Aedu.autocompleteSearch = new AutocompleteSearch({el: '.js-SiteSearch-form'});</
 <ul>
 <li><p>Managing your information and accounts;</p></li>
 <li><p>Providing access to certain areas, functionalities, and features of our Services;</p></li>
+<li><p>Recommend and provide content that may be of more interest to you based on your activity and use of our Services;</p></li>
+<li><p>Issue payments for certain course content that you provide;</p></li>
 <li><p>Answering requests for customer or technical support;</p></li>
 <li><p>Communicating with you about your account, activities on our Services, and policy changes;</p></li>
 <li><p>Processing your financial information and other payment methods for products or Services purchased;</p></li>
@@ -850,7 +860,7 @@ Aedu.autocompleteSearch = new AutocompleteSearch({el: '.js-SiteSearch-form'});</
 <li><p><strong>Consent</strong>. We may use personal information for other purposes that are clearly disclosed to you at the time you provide personal information or with your consent.</p></li>
 <li><p><strong>Automated Decision Making</strong>. We may engage in automated decision making, including profiling. Academia’s processing of your personal information will not result in a decision based solely on automated processing that significantly affects you unless such a decision is necessary as part of a contract we have with you, we have your consent, or we are permitted by law to engage in such automated decision making. If you have questions about our automated decision making, you may contact us as set forth below.</p></li>
 <li><p><strong>De-identified and Aggregated Information</strong>. We may use personal information and other information about you to create de-identified and/or aggregated information, such as de-identified demographic information, de-identified location information, information about the device from which you access our Services, or other analyses we create.</p></li>
-<li><p><strong>Share Content with Friends or Colleagues.</strong> Our Services may offer various tools and functionalities. For example, we may allow you to provide information about your friends through our referral services. Our referral services may allow you to forward or share certain content with a friend or colleague, such as an email inviting your friend to use our Services.</p></li>
+<li id="share-content-with-friends-of-colleagues"><p><strong>Share Content with Friends or Colleagues.</strong> Our Services may offer various tools and functionalities. For example, we may allow you to provide information about your friends through our referral services. Our referral services may allow you to forward or share certain content with a friend or colleague, such as an email inviting your friend to use our Services.</p></li>
 </ul>
 <h1 data-number="4" id="how-we-disclose-your-information">
 <span class="header-section-number">4</span> How We Disclose Your Information</h1>
@@ -859,12 +869,12 @@ Aedu.autocompleteSearch = new AutocompleteSearch({el: '.js-SiteSearch-form'});</
 <span class="header-section-number">4.1</span> Disclosures to Provide our Services</h2>
 <p>The categories of third parties with whom we may share your information are described below.</p>
 <ul>
-<li><p><strong>Service Providers</strong>. We may share your personal information with our third-party service providers who use that information to help us provide our Services. This includes service providers that provide us with IT support, hosting, payment processing, customer service, and related services.</p></li>
+<li><p><strong>Service Providers</strong>. We may share your personal information with our third-party service providers who use that information to help us provide our Services. This includes service providers that provide us with IT support, hosting, payment processing, payments to course creators, customer service, and related services.</p></li>
 <li><p><strong>Business Partners</strong>. We may share your personal information with business partners to provide you with a product or service you have requested. We may also share your personal information to business partners with whom we jointly offer products or services.</p></li>
 <li><p><strong>Affiliates</strong>. We may share your personal information with our company affiliates, for our administrative purpose including activities such as IT management, for them to provide services to you, or support and supplement the Services we provide.</p></li>
 </ul>
 <ul>
-<li><p><strong>Other Academia Users</strong>. If you use certain Academia features, such as browsing profiles or papers belonging to Academia Premium users, your profile information (e.g., your name, city, institutional affiliations, and areas of interest) may be visible to those Premium users. You can control what information is visible to Academia Premium users in your Academia account <a href="https://www.academia.edu/settings#privacy-settings">privacy settings</a>.</p></li>
+<li><p><strong>Other Academia Users</strong>. If you use certain Academia features, such as browsing profiles or papers belonging to Academia Premium users, your profile information (e.g., your name, city, institutional affiliations, and areas of interest) and browsing/viewing activity may be visible to those Premium users. You can control what information is visible to Academia Premium users in your Academia account <a href="https://www.academia.edu/settings#privacy-settings">privacy settings</a>.</p></li>
 </ul>
 <ul>
 <li><p><strong>Advertising Partners</strong>. We may share your personal information with third-party advertising partners. These third-party advertising partners may set Technologies and other tracking tools on our Services to collect information regarding your activities and your device (e.g., your IP address, cookie identifiers, page(s) visited, location, time of day). These advertising partners may use this information (and similar information collected from other services) for purposes of delivering personalized advertisements to you when you visit digital properties within their networks. This practice is commonly referred to as “interest-based advertising” or “personalized advertising.”</p></li>
@@ -911,7 +921,7 @@ Please note you must separately opt out in each browser and on each device.</p><
 <h1 data-number="9" id="supplemental-notice-for-california-residents">
 <span class="header-section-number">9</span> Supplemental Notice for California Residents</h1>
 <p>This Supplemental California Privacy Notice only applies to our processing of personal information that is subject to the California Consumer Privacy Act of 2018 (“CCPA”). The CCPA provides California residents with the right to know what categories of personal information Academia has collected about them and whether Academia disclosed that personal information for a business purpose (e.g., to a service provider) in the preceding 12 months. California residents can find this information below:</p>
-<table class="table table-bordered">
+<table class="table table-bordered two-equal-columns">
 <thead>
 <tr class="header">
 <th><strong>Category of Personal Information Collected by Academia</strong></th>
@@ -931,6 +941,7 @@ Please note you must separately opt out in each browser and on each device.</p><
 <li><p>Operating systems and platforms</p></li>
 <li><p>Social networks</p></li>
 <li><p>Service providers</p></li>
+<li><p>Other Academia users</p></li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -1053,6 +1064,7 @@ Please note you must separately opt out in each browser and on each device.</p><
 <p><strong>Authorized Agent.</strong> Only you, or someone legally authorized to act on your behalf, may make a verifiable consumer request related to your personal information. You may also make a verifiable consumer request on behalf of your minor child. To designate an authorized agent, please contact us as set forth below.</p>
 <p><strong>Verification</strong>. To protect your privacy, we will take steps the following steps to verify your identity before fulfilling your request. When you make a request, we will ask you to provide sufficient information that allows us to reasonably verify you are the person about whom we collected personal information or an authorized representative, which may include asking you to log in to your Academia account or verify the email address associated with your Academia account.</p>
 <p>If you are a California resident and would like to exercise any of your rights under the CCPA, please contact us as set forth below. We will process such requests in accordance with applicable laws.</p>
+<p><strong>Refer-a-Friend and Similar Incentive Programs.</strong>As described above in <a href="#share-content-with-friends-of-colleagues">How We Use Your Personal Information</a> (“Share Content with Friends or Colleagues”), we may offer referral programs or other incentivized data collection programs. For example, we may offer incentives to you such as discounts or promotional items or credit in connection with these programs, wherein you provide your personal information in exchange for a reward, or provide personal information regarding your friends or colleagues (such as their email address) and receive rewards when they sign up to use our Services. (The referred party may also receive rewards for signing up via your referral.) These programs are entirely voluntary and allow us to grow our business and provide additional benefits to you. The value of your data to us depends on how you ultimately use our Services, whereas the value of the referred party’s data to us depends on whether the referred party ultimately becomes a user and uses our Services. Said value will be reflected in the incentive offered in connection with each program.</p>
 <p><strong>Accessibility</strong>. This Privacy Policy uses industry-standard technologies and was developed in line with the World Wide Web Consortium’s Web Content Accessibility Guidelines, version 2.1<strong>.</strong> If you wish to print this policy, please do so from your web browser or by saving the page as a PDF.</p>
 <h1 data-number="10" id="supplemental-notice-for-nevada-residents">
 <span class="header-section-number">10</span> Supplemental Notice for Nevada Residents</h1>
@@ -1115,10 +1127,10 @@ if (window.loswp == null) {
       });
     }
   })();
-}</script></div></div></div><div class="modal-body"><div class="row"><div class="col-xs-10 col-xs-offset-1"><div class="hr-heading login-hr-heading"><span class="hr-heading-text">or</span></div></div></div></div><div class="modal-body"><div class="row"><div class="col-xs-10 col-xs-offset-1"><form class="js-login-form" action="https://www.academia.edu/sessions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="qY7HA2xKhmk0IZupd0fMMAaG/iNO/fvirobj49W52prKxly60wIDmfP0KLnsSbiAt4udGSWkL8932SmexjvFGA==" /><div class="form-group"><label class="control-label" for="login-modal-email-input" style="font-size: 14px;">Email:</label><input class="form-control" id="login-modal-email-input" name="login" type="email" /></div><div class="form-group"><label class="control-label" for="login-modal-password-input" style="font-size: 14px;">Password:</label><input class="form-control" id="login-modal-password-input" name="password" type="password" /></div><input type="hidden" name="post_login_redirect_url" id="post_login_redirect_url" value="https://www.academia.edu/privacy" /><div class="checkbox"><label><input type="checkbox" name="remember_me" id="remember_me" value="1" checked="checked" /><small style="font-size: 12px; margin-top: 2px; display: inline-block;">Remember me on this computer</small></label></div><br><input type="submit" name="commit" value="Log In" class="btn btn-primary btn-block btn-lg js-login-submit" data-disable-with="Log In" /></br></form><script>typeof window?.Aedu?.recaptchaManagedForm === 'function' && window.Aedu.recaptchaManagedForm(
+}</script></div></div></div><div class="modal-body"><div class="row"><div class="col-xs-10 col-xs-offset-1"><div class="hr-heading login-hr-heading"><span class="hr-heading-text">or</span></div></div></div></div><div class="modal-body"><div class="row"><div class="col-xs-10 col-xs-offset-1"><form class="js-login-form" action="https://www.academia.edu/sessions" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="vd3bVXl+D9A7daRCvGAOAaIaRiYTCKrP3hI+ME+mjNWSU+Sff+a1OHQFh1TupvuTFTzriOBB4V0JLl6BNgi6dQ==" /><div class="form-group"><label class="control-label" for="login-modal-email-input" style="font-size: 14px;">Email:</label><input class="form-control" id="login-modal-email-input" name="login" type="email" /></div><div class="form-group"><label class="control-label" for="login-modal-password-input" style="font-size: 14px;">Password:</label><input class="form-control" id="login-modal-password-input" name="password" type="password" /></div><input type="hidden" name="post_login_redirect_url" id="post_login_redirect_url" value="https://www.academia.edu/privacy" /><div class="checkbox"><label><input type="checkbox" name="remember_me" id="remember_me" value="1" checked="checked" /><small style="font-size: 12px; margin-top: 2px; display: inline-block;">Remember me on this computer</small></label></div><br><input type="submit" name="commit" value="Log In" class="btn btn-primary btn-block btn-lg js-login-submit" data-disable-with="Log In" /></br></form><script>typeof window?.Aedu?.recaptchaManagedForm === 'function' && window.Aedu.recaptchaManagedForm(
   document.querySelector('.js-login-form'),
   document.querySelector('.js-login-submit')
-);</script><small style="font-size: 12px;"><br />or&nbsp;<a data-target="#login-modal-reset-password-container" data-toggle="collapse" href="javascript:void(0)">reset password</a></small><div class="collapse" id="login-modal-reset-password-container"><br /><div class="well margin-0x"><form class="js-password-reset-form" action="https://www.academia.edu/reset_password" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5ZhTXwwEkfQm5rHZSIoSvHznwZ+uNc9fJmSC5DHfcHuG0Mjms0wUBOEzAsnThGYMzeqipcVsG3L/O0iZIl1v+Q==" /><p>Enter the email address you signed up with and we'll email you a reset link.</p><div class="form-group"><input class="form-control" name="email" type="email" /></div><script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
+);</script><small style="font-size: 12px;"><br />or&nbsp;<a data-target="#login-modal-reset-password-container" data-toggle="collapse" href="javascript:void(0)">reset password</a></small><div class="collapse" id="login-modal-reset-password-container"><br /><div class="well margin-0x"><form class="js-password-reset-form" action="https://www.academia.edu/reset_password" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="jZsGyw/SAceHMErgqiIBUiUgmeSz7vQyPKnw/yzvVB2iFTkBCUq7L8hAafb45PTAkgY0SkCnv6DrlZBOVUFivQ==" /><p>Enter the email address you signed up with and we'll email you a reset link.</p><div class="form-group"><input class="form-control" name="email" type="email" /></div><script src="https://recaptcha.net/recaptcha/api.js" async defer></script>
         <script>
           var invisibleRecaptchaSubmit = function () {
             var closestForm = function (ele) {
