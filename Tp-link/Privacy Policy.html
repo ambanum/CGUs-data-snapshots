@@ -2367,7 +2367,11 @@
       }
     });
   </script>
-<script>typeof tp != 'undefined' && tp.fixedView.show()</script><div style="display:none">
+<script>
+if(!(/modeltype=/i.test(location.search) || /type=iframe/.test(location.search)) && typeof tp != 'undefined'){
+  tp.fixedView.show()
+}
+</script><div style="display:none">
   <div class="tp-cookie-tpl">
     <div class="w-container">
       <div class="tp-cookie-left">
