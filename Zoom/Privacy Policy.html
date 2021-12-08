@@ -160,7 +160,13 @@ display:none;
 <!-- all relative path starting from '/' are changed to start with 'https://zoom.us/' -->
 <!-- href="/..." ==> href="https://zoom.us/..."  -->
 <!-- src="/..." ==> src="https://zoom.us/..." -->
-
+<script>
+ if(window.location.href.indexOf("onlycontent=1") > -1) {
+                var sheet = document.createElement('style')
+                sheet.innerHTML = "#header_container, #footer_container{ display:none !important; }";
+                document.body.appendChild(sheet);
+}
+</script>
 <header class="main_header">
   <div id="header_container" class="zoom-newhd zoom-enterprise-header">
     <div id="header_outer" class="container clearfix  zoom-newhd">
@@ -867,7 +873,7 @@ Copyright &copy;2021 Zoom Video Communications, Inc. All rights reserved. <a hre
 <script>
  if(window.location.href.indexOf("onlycontent=1") > -1) {
                 var sheet = document.createElement('style')
-                sheet.innerHTML = "#ada-entry, #onetrust-consent-sdk{ display:none !important; }";
+                sheet.innerHTML = "#ada-entry, #onetrust-consent-sdk { display:none !important; }";
                 document.body.appendChild(sheet);
 }
 </script>
@@ -1356,13 +1362,11 @@ Copyright &copy;2021 Zoom Video Communications, Inc. All rights reserved. <a hre
         if ('1' == getFromParam('onlycontent')) {
             $('.page-header').hide();
             $('#leftNav').hide();
-            $('#header_container').hide();
             $('main').removeClass('zoom-newcontent');
             $('main').parents('body').addClass('onlycontent');
             $('#ZoomWebBanner').remove();
             $('.brand-right').css({ float: 'inherit', 'font-size': 14 });
             $('#teconsent').remove();
-            $('#footer_container').hide();
         }
         if ('1' == getFromParam('nohyperlink')) {
             $('a.sr-only').remove();
