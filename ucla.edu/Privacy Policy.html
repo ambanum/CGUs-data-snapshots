@@ -23,7 +23,6 @@
   <!-- Main CSS -->
   <link rel="stylesheet" type="text/css" href="https://cdn.webcomponents.ucla.edu/1.0.0-beta.15/css/ucla-lib.min.css">
   <link href="/css/app.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css"/>
   <link href="/css/app.css" rel="stylesheet" type="text/css">
 </head>
@@ -120,13 +119,18 @@
 
 		document.addEventListener('DOMContentLoaded', function() {
 			setTimeout(function() {
-				document.getElementById('gsc-i-id1').setAttribute('role', 'search');
-				document.getElementById('gsc-i-id1').setAttribute('type', 'search');
+				var $gscEl = $('#gsc-i-id1');
+
+				if ($gscEl.length) {
+				    $gscEl.attr({
+					    role: 'search',
+                        type: 'search'
+					});
+				}
 			}, 500);
 		});
 
 		window.onload = function() {
-			alert('reached');
 			var search_mobile =  document.getElementById("gsc-i-id1");
 			search_mobile.placeholder="Search for...";
 			search_mobile.title="Search";
@@ -729,7 +733,52 @@
 
 <footer id="footer">
 
-        <div class="has-background-ucla-blue has-white-text">
+    <div class="email">
+  <div class="ucla campus">
+
+      <h3 class="email__heading">SIGN UP FOR NEWS, STORIES, AND EVENTS FROM UCLA STRATEGIC COMMUNICATIONS</h3>
+
+      <form class="email__signup" method="post" action="/api/newsletter">
+          <div class="email__input-container">
+              <div class="email__input email__input-email">
+                  <label class="email__input-label" for="control_EMAIL">Email</label>
+                  <input type="text" id="control_EMAIL" class="email__input-text" name="Email" label="Email" aria-label="Your Email Address" required>
+              </div>
+              <div class="email__input email__input-firstname">
+                  <label class="email__input-label" for="control_FIRSTNAME">First Name</label>
+                  <input type="text" id="control_FIRSTNAME" class="email__input-text" name="First_Name" label="FirstName" aria-label="Your First Name" required>
+              </div>
+              <div class="email__input email__input-lastname">
+                  <label class="email__input-label" for="control_LASTNAME">Last Name</label>
+                  <input type="text" id="control_LASTNAME" class="email__input-text" name="Last_Name" label="LastName" aria-label="Your Last Name" required>
+              </div>
+              <div class="email__input email__input-zipcode">
+                  <label class="email__input-label" for="control_ZipCode">Zip Code</label>
+                  <input type="text" id="control_ZipCode" class="email__input-text" name="Zip" label="ZipCode" aria-label="Your Zipcode" required>
+              </div>
+              <div class="email__input email__input-button">
+                  <input class="email__input-submit" type="submit" value="Sign Up" aria-label="Sign Up">
+              </div>
+          </div>
+          <input type="hidden" name="formSourceName" value="StandardForm">
+          <input type="hidden" name="sp_exp" value="yes">
+          <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" value="">
+          <input type="hidden" name="action" value="validate_captcha">
+      </form>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LcUrnQdAAAAAHoXBg-UQ2vjXRD1K7tDcICh5QVN"></script>
+
+      <div class="email__form-error-msg"></div>
+      <div class="email__form-success-msg">
+          <span class='email__form-success-icon'></span> Your email was submitted. Please check your inbox to complete your registration.
+      </div>
+
+      <p class="email__legal-text">
+          You may unsubscribe at any time. Zip code is used to improve the content we share. Refer to our <a class="email__legal-link" href="/terms-of-use/">Terms of Use</a> for more information on how we store and protect your data.
+      </p>
+
+  </div>
+</div>
+    <div class="has-background-ucla-blue has-white-text">
   <div class="ucla campus pt-32">
 
     <div class="department">
@@ -851,7 +900,6 @@
 <script type="text/javascript" src="/js/vendor/jquery.hideseek.min.js" ></script>
 <script type="text/javascript" src="/js/vendor/stupidtable.min.js" ></script>
 <script type="text/javascript" src="/js/vendor/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
