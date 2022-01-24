@@ -1,3 +1,9 @@
+__:warning: Deprecated repository__
+
+_This repository is still useful as an example data format and as an archive, but [for scaling reasons it is deprecated](https://github.com/ambanum/OpenTermsArchive/blob/master/decision-records/0003-snapshots-database.md)._
+
+_Contact us by email to contact@opentermsarchive.org to get access to the raw data if you have any specific need._
+
 # Open Terms Archive - Snapshots
 
 This repository is to be considered as a database only.
